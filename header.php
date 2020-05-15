@@ -93,7 +93,7 @@
 
 <!-- Header Container
 ================================================== -->
-<header id="header-container">
+<header id="header-container" >
 
 	<!-- Topbar -->
 	<div id="top-bar">

@@ -78,4 +78,13 @@ function register_query_scripts(){
     // wp_enqueue_script("",get_template_directory_uri().'/scripts/main.js');
 }
 
+function getCFSValue($name){
+	if(function_exists("CFS")){
+		return CFS()->get($name);
+	}
+	else{
+		return "";
+	}
+}
+
 ?>

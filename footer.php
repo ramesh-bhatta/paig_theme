@@ -82,8 +82,8 @@
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/slick.min.js"></script>
 <!-- <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/masonry.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/mmenu.min.js"></script>
-<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/tooltips.min.js"></script>
-<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/custom.js"></script> -->
+<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/tooltips.min.js"></script>-->
+<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/custom.js"></script> 
 
 <!-- Google Autocomplete -->
 <script>
