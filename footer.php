@@ -1,7 +1,7 @@
 
 <!-- Footer
 ================================================== -->
-<div id="footer" class="sticky-footer">
+<div id="footer">
 	<!-- Main -->
 	<div class="container">
 		<div class="row">
@@ -74,15 +74,15 @@
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/jquery-3.4.1.min.js"></script>
 
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/jquery-migrate-3.1.0.min.js"></script>
-<!-- <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/chosen.min.js"></script>
+ <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/chosen.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/magnific-popup.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/owl.carousel.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/rangeSlider.js"></script>
-<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/sticky-kit.min.js"></script> -->
+<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/sticky-kit.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/slick.min.js"></script>
-<!-- <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/masonry.min.js"></script>
+<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/masonry.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/mmenu.min.js"></script>
-<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/tooltips.min.js"></script>-->
+<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/tooltips.min.js"></script>
 <script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/scripts/custom.js"></script> 
 
 <!-- Google Autocomplete -->

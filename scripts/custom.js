@@ -233,7 +233,7 @@ $(document).ready(function(){
 
 	// replacing comma with dot
 	$(document).on('change', function() {
-		$("#interest").val($("#interest").val().replace(/,/g, '.'));
+		// $("#interest").val($("#interest").val().replace(/,/g, '.'));
 	});
 
 	// Calculator
@@ -434,11 +434,11 @@ $(document).ready(function(){
       '.chosen-select-width'     : {width:"95%"}
     };
 
-    for (var selector in config) {
-	   	if (config.hasOwnProperty(selector)) {
-	      $(selector).chosen(config[selector]);
-	  	}
-    }
+    // for (var selector in config) {
+	//    	if (config.hasOwnProperty(selector)) {
+	//       $(selector).chosen(config[selector]);
+	//   	}
+    // }
 
 
     /*  Custom Input With Select
