@@ -1,0 +1,27 @@
+
+
+#logo img { 
+    max-height: 70px;
+     width: auto;
+      transform: translate3d(0,0,0);
+     }
+
+/* css for footer section÷ */
+
+.footer-top{
+
+}
+
+.footer-bottom{
+background:#6DB6E5;
+padding:20px 0 10px 0;
+color:#fff;
+}
+
+.footer-bottom a{
+color:#eee;
+}
+
+.footer-bottom .pb{
+float:right;
+}
