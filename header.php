@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <head>
 
-<!-- Basic Page Needs
-================================================== -->
+<!-- Basic Page Needs ================================================== -->
 <title>PAIG Buidling Services</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- CSS
-================================================== -->
+<!-- CSS ================================================== -->
 <link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/css/style.css">
 <link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/css/color.css">
 
+<!-- for leafletlet map -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>

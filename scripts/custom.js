@@ -201,21 +201,21 @@ $(document).ready(function(){
 	/*  Tooltips
 	/*----------------------------------------------------*/
 
-	// $(".tooltip.top").tipTip({
-	//   defaultPosition: "top"
-	// });
-	//
-	// $(".tooltip.bottom").tipTip({
-	//   defaultPosition: "bottom"
-	// });
-	//
-	// $(".tooltip.left").tipTip({
-	//   defaultPosition: "left"
-	// });
-	//
-	// $(".tooltip.right").tipTip({
-	//   defaultPosition: "right"
-	// });
+	$(".tooltip.top").tipTip({
+	  defaultPosition: "top"
+	});
+	
+	$(".tooltip.bottom").tipTip({
+	  defaultPosition: "bottom"
+	});
+	
+	$(".tooltip.left").tipTip({
+	  defaultPosition: "left"
+	});
+	
+	$(".tooltip.right").tipTip({
+	  defaultPosition: "right"
+	});
 
 
 
