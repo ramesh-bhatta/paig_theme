@@ -91,6 +91,88 @@ function paig_metadata_customize_register( $wp_customize ) {
         'type'       => 'text',
     ) );
 
+
+    $wp_customize->add_section( 'paig_footer_settings' , array(
+        'title'             => 'PAIG Footer Settings',
+        'panel'             => 'paig_site_meta',
+    ));
+
+    //for copyright text and url
+
+    $wp_customize->add_setting( "copyright_text" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'copyright_text_control', array(
+        'label'      => "Copyright Text",
+        'section'    => 'paig_footer_settings',
+        'settings'   => "copyright_text",
+        'type'       => 'text',
+    ) );
+
+    $wp_customize->add_setting( "copyright_url" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'copyright_url_control', array(
+        'label'      => "Copyright URL",
+        'section'    => 'paig_footer_settings',
+        'settings'   => "copyright_url",
+        'type'       => 'text',
+    ) );
+
+   // for powered by text and url
+    $wp_customize->add_setting( "poweredby_text" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'poweredby_text_control', array(
+        'label'      => "Powered By Text",
+        'section'    => 'paig_footer_settings',
+        'settings'   => "poweredby_text",
+        'type'       => 'text',
+    ) );
+
+    $wp_customize->add_setting( "poweredby_url" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'poweredby_url_control', array(
+        'label'      => "Powered By URL",
+        'section'    => 'paig_footer_settings',
+        'settings'   => "poweredby_url",
+        'type'       => 'text',
+    ) );
+
+
+    $wp_customize->add_setting( "terms_url" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'terms_url_control', array(
+        'label'      => "Terms of Use URL",
+        'section'    => 'paig_footer_settings',
+        'settings'   => "terms_url",
+        'type'       => 'text',
+    ) );
+
+    $wp_customize->add_setting( "privacy_url" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'privacy_url_control', array(
+        'label'      => "Privacy URL",
+        'section'    => 'paig_footer_settings',
+        'settings'   => "privacy_url",
+        'type'       => 'text',
+    ) );
+
 }
 add_action( 'customize_register', 'paig_metadata_customize_register' );
 

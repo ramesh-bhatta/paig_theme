@@ -8,5 +8,3 @@
     </div>
 </div>
 
-
-<?php echo do_shortcode("[paig_property_list]"); ?>
