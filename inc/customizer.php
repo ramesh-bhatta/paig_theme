@@ -19,14 +19,25 @@ function paig_metadata_customize_register( $wp_customize ) {
             
     // Create our settings
 
-    $wp_customize->add_setting( 'phone_number' , array(
+    $wp_customize->add_setting( 'phone_number1' , array(
         'type'          => 'theme_mod',
         'transport'     => 'refresh',
     ));
-    $wp_customize->add_control( 'phone_number_control', array(
-        'label'      => 'Phone Number',
+    $wp_customize->add_control( 'phone_number_control1', array(
+        'label'      => 'Phone Number 1',
         'section'    => 'paig_contact_details',
-        'settings'   => 'phone_number',
+        'settings'   => 'phone_number1',
+        'type'       => 'text',
+    ) );
+
+    $wp_customize->add_setting( 'phone_number2' , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+    $wp_customize->add_control( 'phone_number_control2', array(
+        'label'      => 'Phone Number 2',
+        'section'    => 'paig_contact_details',
+        'settings'   => 'phone_number2',
         'type'       => 'text',
     ) );
 
@@ -58,7 +69,7 @@ function paig_metadata_customize_register( $wp_customize ) {
     ));
 
 
-    $social_media=["facebook","twitter","instagram"];
+    $social_media=getPaigSocialMedia();
 
     foreach($social_media as $social){
         $wp_customize->add_setting( $social , array(
@@ -177,5 +188,6 @@ function paig_metadata_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'paig_metadata_customize_register' );
 
 
-
-?>
+function getPaigSocialMedia(){
+    return ["facebook","youtube","instagram","linkedin"];
+}

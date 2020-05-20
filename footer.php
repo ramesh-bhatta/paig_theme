@@ -2,78 +2,87 @@
 ================================================== -->
 <div id="footer">
 	<!-- Main -->
-<div class="footer-top">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5 col-sm-6">
-			<?php the_custom_logo(); ?>
-				<br><br>
-				<p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
-			</div>
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-sm-6">
+					<?php the_custom_logo(); ?>
+					<br><br>
 
-			<div class="col-md-4 col-sm-6 ">
-				<h4>Helpful Links</h4>
-				<ul class="footer-links">
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Sign Up</a></li>
-					<li><a href="#">My Account</a></li>
-					<li><a href="#">Add Property</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-				</ul>
-
-				<ul class="footer-links">
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Our Agents</a></li>
-					<li><a href="#">How It Works</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-				<div class="clearfix"></div>
-			</div>
-
-			<div class="col-md-3  col-sm-12">
-				<h4>Contact Us</h4>
-				<div class="text-widget">
-					<span>100 Harris Street, Pyrmont, Sydney</span> <br>
-					<i class="fa fa-phone-square"></i> : <span>13 00 PAIG </span><br>
-					<i class="fa fa-envelope-square"></i> :<span> <a href="#">admin@paigtechnologies.com.au</a> </span><br>
 				</div>
 
-				<ul class="social-icons margin-top-20">
-					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-					<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-					<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-					<li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
-				</ul>
+				<div class="col-md-4 col-sm-6 ">
+					<h4>Helpful Links</h4>					
+					<?php
+					wp_nav_menu(array(						
+						'theme_location'   => 'primary_menu',
+						'menu_class'   => 'footer-links'						
+					));
+					?>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="col-md-3  col-sm-12">
+					<h4>Contact Us</h4>
+					<div class="text-widget">
+						<i class="fa fa-globe"></i> <span>100 Harris Street, Pyrmont, Sydney</span> <br>
+						<i class="fa fa-phone-square"></i> <span>1300 00 PAIG </span><br>
+						<i class="fa fa-envelope-square"></i> <span> <a href="#">admin@paigtechnologies.com.au</a> </span><br>
+					</div>
+
+					<ul class="social-icons margin-top-20">
+
+						<?php $socialItems = getPaigSocialMedia();
+						foreach ($socialItems as $socialItem) :
+							if (!empty(getCustomThemeValue($socialItem))) :
+						?>
+								<li>
+									<a class="<?php echo $socialItem ?>" target="_blank" href="<?php echo getCustomThemeValue($socialItem) ?>">
+										<i class="icon-<?php echo $socialItem ?>"></i>
+									</a>
+								</li>
+						<? endif;
+						endforeach; ?>
+
+					</ul>
+
+				</div>
 
 			</div>
-
 		</div>
-	</div>
 	</div>
 
 	<div class="footer-bottom">
 
-	<div class="container">
-		<!-- Copyright -->
-		<div class="row">
-			<div class="col-md-4 col-xs-12">
-				<div class="cr">Copyright © 2020 PAIG Building Services</div>
-			</div>
-			<div class="col-md-4 col-xs-12">
-				<div class="privacy-div">
-					<ul class="list-inline">
-						<li><a href="">Terms of Use</a></li>
-						<li><a href="">Privacy Policy</a></li>
-					</ul>
+		<div class="container">
+			<!-- Copyright -->
+			<div class="row">
+				<div class="col-md-4 col-xs-12">
+					<div class="cr">Copyright © <a href="<?php echo getCustomThemeValue("copyright_url") ?>" target="#">
+							<?php
+							echo getCustomThemeValue("copyright_text");
+							?>
+						</a></div>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<div class="privacy-div">
+						<ul class="list-inline">
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<div class="pb">Powered By
+						<a href="<?php echo getCustomThemeValue("poweredby_url") ?>" target="#">
+							<?php
+							echo getCustomThemeValue("poweredby_text");
+							?>
+						</a>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-xs-12">
-				<div class="pb">Powered By <a href="http://www.paigtechnologies.com.au" target="#">PAIG Technologies</a></div>
-			</div>
 		</div>
-	</div>
 
 	</div>
 
