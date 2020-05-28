@@ -28,7 +28,7 @@
 		<header id="header-container" >
 
 			<!-- Topba -->
-			<div id="top-bar">
+		<div id="top-bar">
 				<div class="container">
 
 					<!-- Left Side Content -->
