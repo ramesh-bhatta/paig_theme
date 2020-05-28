@@ -22,10 +22,10 @@
 <body>
 <?php wp_body_open(); ?>
 	<!-- Wrapper -->
-	<div>
+	<div id="wrapper">
 		<!-- Header Container
 ================================================== -->
-		<header id="header-container">
+		<header id="header-container" >
 
 			<!-- Topba -->
 			<div id="top-bar">
@@ -72,56 +72,58 @@
 
 			<!-- Header -->
 			<div id="header">
-				<div class="container ">
-					<div class="flex flex-wrap items-center">
-						<!-- Left Side Content -->
-						<div class="col-md-9 flex flex-wrap items-center">
-
-							<!-- Logo -->
-							<div id="logo">
-								<?php the_custom_logo('custom-logo'); ?>
-							</div>
-
-
-							<!-- Mobile Navigation -->
-							<div class="mmenu-trigger">
-								<button class="hamburger hamburger--collapse" type="button">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
-							</div>
-
-
-							<!-- Main Navigation -->
-							<nav id="navigation" class="style-1">
-								<?php
-								wp_nav_menu(array(
-									'theme_location'   => 'primary_menu',
-									'walker' => new WP_Bootstrap_Navwalker()
-								));
-								?>
-							</nav>
-							<div class="clearfix"></div>
-							<!-- Main Navigation / End -->
-
-						</div>
-						<!-- Left Side Content / End -->
-
-						<!-- Right Side Content / End -->
-						<div class="col-md-3">
-							<!-- Header Widget -->
-							<div class="header-widget">
-								<a href="<?php echo get_theme_mod("login_url"); ?>" class="sign-in">
-									<i class="fa fa-user"></i> Log In / Register
-								</a>
-							</div>
-							<!-- Header Widget / End -->
-						</div>
-						<!-- Right Side Content / End -->
-					</div>
+		<div class="container">
+			
+			<!-- Left Side Content -->
+			<div class="left-side">
+				
+				<!-- Logo -->
+				<div id="logo">
+					<a href="index.php"><?php the_custom_logo('custom-logo'); ?></a>
 				</div>
+
+				<!-- Mobile Navigation -->
+				<div class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+
+
+				<!-- Main Navigation -->
+				<nav id="navigation" class="style-1">
+					<?php
+						wp_nav_menu(array(
+							'theme_location'   => 'primary_menu',
+							'menu_class'=>'',
+							'container'=>'ul',
+							'menu_id'=>'responsive',
+							'walker' => new WP_Bootstrap_Navwalker()
+						));
+					?>
+				</nav>
+				<div class="clearfix"></div>
+				<!-- Main Navigation / End -->
+				
 			</div>
+			<!-- Left Side Content / End -->
+
+			<!-- Right Side Content / End -->
+			<div class="right-side">
+				<!-- Header Widget -->
+				<div class="header-widget">
+					<a href="<?php echo get_theme_mod("login_url"); ?>" class="sign-in" target="__blank"><i class="fa fa-user"></i> Log In / Register</a>
+					
+				</div>
+				<!-- Header Widget / End -->
+			</div>
+			<!-- Right Side Content / End -->
+
+		</div>
+	</div>
+
 			<!-- Header / End -->
 
 		</header>
