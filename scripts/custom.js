@@ -564,13 +564,13 @@ $(document).ready(function(){
 	/*----------------------------------------------------*/
 	/*  Compare Menu
 	/*----------------------------------------------------*/
-    $('.csm-trigger').on('click', function(){
-		$('.compare-slide-menu').toggleClass('active');
-	});
+    // $('.csm-trigger').on('click', function(){
+	// 	$('.compare-slide-menu').toggleClass('active');
+	// });
 
-    $('.csm-mobile-trigger').on('click', function(){
-		$('.compare-slide-menu').removeClass('active');
-	});
+    // $('.csm-mobile-trigger').on('click', function(){
+	// 	$('.compare-slide-menu').removeClass('active');
+	// });
 
     // Tooltips
 	$(".compare-button.with-tip, .like-icon.with-tip, .widget-button.with-tip").each(function() {
