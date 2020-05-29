@@ -75,12 +75,16 @@ add_action("wp_footer", "register_query_scripts");
 function register_query_scripts()
 {
 
-    wp_enqueue_script("axios-script", "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js");
-    wp_enqueue_script("vue-script", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js");
-    wp_enqueue_script("searchbar-script", VUE_COMPONENT_URL . "searchbar.js");
-    wp_enqueue_script("carousel-script", VUE_COMPONENT_URL . "properties-carousel.js");
-    //Main File should always be in bottom
-    wp_enqueue_script("main-script", get_template_directory_uri() . '/scripts/main.js');
+    wp_enqueue_script("chosen-script", get_template_directory_uri() . '/scripts/chosen.min.js',array('jquery'));
+    wp_enqueue_script("magnific-script", get_template_directory_uri() . '/scripts/magnific-popup.min.js"',array('jquery'));
+    wp_enqueue_script("rangeSlider", get_template_directory_uri() . '/scripts/rangeSlider.js"',array('jquery'));
+    wp_enqueue_script("sticky-kite", get_template_directory_uri() . '/scripts/sticky-kit.min.js"',array('jquery'));
+    wp_enqueue_script("masonry", get_template_directory_uri() . '/scripts/masonry.min.js"',array('jquery'));
+    wp_enqueue_script("mmenu", get_template_directory_uri() . '/scripts/mmenu.min.js"',array('jquery'));
+    wp_enqueue_script("tooltips", get_template_directory_uri() . '/scripts/tooltips.min.js"',array('jquery'));
+    wp_enqueue_script("theme-custom", get_template_directory_uri() . '/scripts/custom.js"',array('jquery'));
+    
+
     // wp_enqueue_script("",get_template_directory_uri().'/scripts/main.js');
 }
 

@@ -273,7 +273,7 @@ header.fullwidth .container {
 }
 
 .right-side {
-	float: right;
+	float:right;
 	width: 35%;
 	display: inline-block;
 }

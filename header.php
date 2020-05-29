@@ -75,10 +75,10 @@
 		<div class="container">
 			
 			<!-- Left Side Content -->
-			<div class="left-side">
+			<div class="left-side flex items-center">
 				
 				<!-- Logo -->
-				<div id="logo">
+				<div id="logo" class="flex-1">
 					<a href="index.php"><?php the_custom_logo('custom-logo'); ?></a>
 				</div>
 
