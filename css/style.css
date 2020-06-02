@@ -213,7 +213,7 @@ ul.top-bar-menu li i {
 ------------------------------------- */
 #logo { display: inline-block; margin-top: 1px; }
 
-#logo img { max-height: 43px; width: auto; transform: translate3d(0,0,0); }
+
 img.footer-logo { max-height: 43px; width: auto; transform: translate3d(0,0,0); }
 
 #header {
@@ -1815,13 +1815,14 @@ em.mm-counter+a.mm-fullsubopen+span {
 /* Trigger Styles */
 .mmenu-trigger {
     height: 50px;
-    width: 50px;
+    width: 55px;
     display: none;
     position: relative;
     margin: 0 0 23px 0;
     background-color: #eee;
     border-radius: 4px;
-    cursor: pointer;
+	cursor: pointer;
+	margin-bottom:0px;
 }
 
 /* Hamburger Icon */
@@ -1934,7 +1935,7 @@ transform: rotate(-90deg); }
 
 	.header-widget {
 		padding: 20px 0;
-		border-top: 1px solid #eee;
+		/* border-top: 1px solid #eee; */
 	}
 
 	.header-widget a.button.border {
@@ -2845,7 +2846,7 @@ span.like-icon {
     line-height: 24px;
     right: 15px;
     font-size: 12px;
-    background: rgba(74,74,76,0.62);
+    /* background: rgba(74,74,76,0.62); */
 }
 
 .csm-content .compact .listing-img-container:after { display: none; }
@@ -3831,7 +3832,7 @@ button.fs-map-btn.button {
 	display: inline-block;
 	padding: 1px 10px;
 	float: right;
-	background-color: rgba(74,74,76,0.7);
+	/* background-color: rgba(74,74,76,0.7); */
 	border-radius: 3px;
 	top: 15px;
 	right: 15px;
