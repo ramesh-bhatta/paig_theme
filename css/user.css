@@ -3,9 +3,8 @@ html {
   }
 
 #logo img { 
-    max-height: 70px;
-     width: auto;
-      transform: translate3d(0,0,0);
+    height:auto;
+    width:auto;
      }
 
 
