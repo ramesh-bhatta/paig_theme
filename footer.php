@@ -41,7 +41,7 @@
 										<i class="icon-<?php echo $socialItem ?>"></i>
 									</a>
 								</li>
-						<? endif;
+						<?php endif;
 						endforeach; ?>
 
 					</ul>
