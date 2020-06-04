@@ -58,7 +58,7 @@
 										<i class="icon-<?php echo $socialItem ?>"></i>
 									</a>
 								</li>
-								<? endif; endforeach; ?>
+								<?php endif; endforeach; ?>
 						</ul>
 
 					</div>
@@ -114,7 +114,9 @@
 			<div class="right-side">
 				<!-- Header Widget -->
 				<div class="header-widget">
-					<a href="<?php echo get_theme_mod("login_url"); ?>" class="sign-in" target="__blank"><i class="fa fa-user"></i> Log In / Register</a>
+					<a href="<?php echo get_theme_mod("login_url"); ?>" class="sign-in" target="__blank">
+					<i class="fa fa-user"></i> Log In / Register
+					</a>
 					
 				</div>
 				<!-- Header Widget / End -->
