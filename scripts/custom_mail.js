@@ -1,11 +1,11 @@
 (function($){
     $(document).ready(()=>{
-        let name=$("#name").val();
-        let email=$("#email").val();
-        let subject=$("#subject").val();
-        let message=$("#comments").val();
         $("#contact").submit((e)=>{
             e.preventDefault();
+            let name=$("#name").val();
+            let email=$("#email").val();
+            let subject=$("#subject").val();
+            let comments=$("#comments").val();
             $.post({
                 url:myAjax.ajaxurl,
                 data : {
@@ -16,7 +16,7 @@
                     name:name,
                     email:email,
                     subject:subject,
-                    message:message,
+                    comments:comments,
                     
                 },
             }).then((res)=>{
