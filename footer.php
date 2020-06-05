@@ -12,11 +12,11 @@
 				</div>
 
 				<div class="col-md-4 col-sm-6 ">
-					<h4>Helpful Links</h4>					
+					<h4>Helpful Links</h4>
 					<?php
-					wp_nav_menu(array(						
-						'theme_location'   => 'primary_menu',
-						'menu_class'   => 'footer-links'						
+					wp_nav_menu(array(
+						'theme_location'=> 'footer_menu',
+						'menu_class'   => 'footer-links'
 					));
 					?>
 					<div class="clearfix"></div>
@@ -25,9 +25,26 @@
 				<div class="col-md-3  col-sm-12">
 					<h4>Contact Us</h4>
 					<div class="text-widget">
-						<i class="fa fa-globe"></i> <span>100 Harris Street, Pyrmont, Sydney</span> <br>
-						<i class="fa fa-phone-square"></i> <span>1300 00 PAIG </span><br>
-						<i class="fa fa-envelope-square"></i> <span> <a href="#">admin@paigtechnologies.com.au</a> </span><br>
+						<ul class="list-none address-block">
+							<li>
+								<a href="<?php getCustomThemeValue("address"); ?>">
+									<i class="fa fa-globe"></i>
+									<?php echo getCustomThemeValue("address"); ?>
+								</a>
+							</li>
+							<li>
+								<a href="tel:<?php getCustomThemeValue("phone_number1"); ?>">
+									<i class="fa fa-phone-square"></i>
+									<?php echo getCustomThemeValue("phone_number1"); ?>
+								</a>
+							</li>
+							<li>
+								<a href="mailto:<?php echo getCustomThemeValue("email_address"); ?>">
+									<i class="fa fa-envelope-square"></i>
+									<?php echo getCustomThemeValue("email_address"); ?>
+								</a>
+							</li>
+						</ul>
 					</div>
 
 					<ul class="social-icons margin-top-20">

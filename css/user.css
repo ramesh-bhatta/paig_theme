@@ -16,8 +16,11 @@ html {
 
 /* css for footer section÷ */
 
-.footer-top{
-
+.footer-top  .address-block{
+  padding-left:0px;
+}
+.footer-top  .address-block a{
+  color:#707070;
 }
 
 .footer-bottom{
@@ -33,5 +36,7 @@ color:#eee;
 .footer-bottom .pb{
 float:right;
 }
+
+
 
 
