@@ -48,21 +48,14 @@ get_header(); ?>
                         <li><i class="im im-icon-Envelope"></i> <strong>Email:</strong> <span><a
                                         href="<?php echo getCustomThemeValue("email_address"); ?>"><?php echo getCustomThemeValue("email_address"); ?></a></span>
                         </li>
-
-
                     </ul>
                 </div>
 
             </div>
 
-            <!-- Contact Form -->
-            <div class="col-md-8">
-
-
-                <?php get_template_part("template-parts/page/contact/contact-form"); ?>
-            </div>
-            <!-- Contact Form / End -->
-
+        <!-- Contact Form -->
+        <div class="col-md-8">          
+            <?php get_template_part("template-parts/page/contact/contact-form"); ?>
         </div>
 
     </div>
