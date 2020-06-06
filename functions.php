@@ -1,9 +1,10 @@
-
 <?php
 
 require get_template_directory() . "/inc/customizer.php";
 
 require get_template_directory() . "/inc/menus/class-bootstrap-navwalker.php";
+
+require get_template_directory() ."/inc/custom-block.php";
 
 define("VUE_COMPONENT_URL", get_template_directory_uri() . "/assets/vue/components/");
 define("PAIG_THEME_URL", get_template_directory_uri());
