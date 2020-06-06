@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Template Name: Contact Page
 Template Post Type: post, page, event
@@ -38,32 +38,19 @@ get_header(); ?>
             <!-- Contact Details -->
             <div class="sidebar-textbox">
                 <ul class="contact-details">
-                <li><i class="im im-icon-Globe"></i> <strong>Address:</strong> <span><a href="#"><?php echo getCustomThemeValue("address"); ?></a></span></li>
-                <li><i class="im im-icon-Phone-2"></i> <strong>Phone:</strong> <span><a href="<?php echo getCustomThemeValue("phone_number1"); ?>"><?php echo getCustomThemeValue("phone_number1"); ?></a></span></li>
-                <li><i class="im im-icon-Envelope"></i> <strong>Email:</strong> <span><a href="<?php echo getCustomThemeValue("email_address"); ?>"><?php echo getCustomThemeValue("email_address"); ?></a></span></li>
-                  
-            
-            </ul>
+                    <li><i class="im im-icon-Globe"></i> <strong>Address:</strong> <span><a href="#"><?php echo getCustomThemeValue("address"); ?></a></span></li>
+                    <li><i class="im im-icon-Phone-2"></i> <strong>Phone:</strong> <span><a href="<?php echo getCustomThemeValue("phone_number1"); ?>"><?php echo getCustomThemeValue("phone_number1"); ?></a></span></li>
+                    <li><i class="im im-icon-Envelope"></i> <strong>Email:</strong> <span><a href="<?php echo getCustomThemeValue("email_address"); ?>"><?php echo getCustomThemeValue("email_address"); ?></a></span></li>
+
+
+                </ul>
             </div>
 
         </div>
 
         <!-- Contact Form -->
-        <div class="col-md-8">
-
-        <div>
-            <?php
-            if(isset($emailSent)){
-
-                echo "sucessful";
-            }else{
-echo "failed";
-            }
-
-
-            ?>
-        </div>
-        <?php get_template_part("template-parts/page/contact/contact-form"); ?>      
+        <div class="col-md-8">          
+            <?php get_template_part("template-parts/page/contact/contact-form"); ?>
         </div>
         <!-- Contact Form / End -->
 
