@@ -1,8 +1,8 @@
 <!-- Fullwidth Section -->
-<section class="fullwidth margin-top-0 offer-section" data-background-color="#f7f7f7" id="what-we-do">
+<section class="fullwidth margin-top-0 offer-section" data-background-color="#f7f7f7" id="what-we-offer">
 
     <!-- Box Headline -->
-    <h3 class="headline-box">What are you looking for?</h3>
+    <h3 class="headline-box">What We Offer</h3>
 
     <!-- Content -->
     <div class="container">

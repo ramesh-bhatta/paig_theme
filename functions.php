@@ -1,75 +1,17 @@
 <?php
 
+
 require get_template_directory() . "/inc/customizer.php";
 
 require get_template_directory() . "/inc/menus/class-bootstrap-navwalker.php";
 
 require get_template_directory() ."/inc/custom-block.php";
 
+require get_template_directory() ."/inc/contact_email.php";
+
 define("VUE_COMPONENT_URL", get_template_directory_uri() . "/assets/vue/components/");
 define("PAIG_THEME_URL", get_template_directory_uri());
 
-
-
-
-add_action('init', 'contact_form_enquerer');
-
-function contact_form_enquerer()
-{
-    wp_register_script("custom_mail", PAIG_THEME_URL . '/scripts/custom_mail.js', array('jquery'));
-
-    wp_localize_script('custom_mail', 'myAjax', array(
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce("contact_security_nonce")
-    ));
-
-    wp_enqueue_script('custom_mail');
-}
-
-
-add_action("wp_ajax_custom_form_submit", "custom_form_submit");
-add_action("wp_ajax_nopriv_custom_form_submit", "custom_form_submit");
-function custom_form_submit()
-{
-
-    if (!wp_verify_nonce($_POST['nonce'], "contact_security_nonce")) {
-        wp_send_json_error(array(
-            "msg" => "Not Valid"
-        ));
-    }
-
-    $name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : "";
-    $email = isset($_POST['email']) ? sanitize_email($_POST['email']): "";
-    $subject = isset($_POST['subject']) ? sanitize_text_field($_POST['subject']) : "";
-    $message = isset($_POST['comments']) ? sanitize_text_field($_POST['comments']) : "";
-    $headers = array('Content-Type: text/html; charset=UTF-8');
-    $to = "ramesh.paig@outlook.com";
-    $mail = wp_mail($to, $subject, $message, $headers);
-
-    if ($mail) {
-        wp_send_json_success(array(
-            "msg" => "Succesfully Send"
-        ));
-    } else {
-        wp_send_json_error(array(
-            "error" => "Failed "
-        ));
-    }
-}
-
-add_action("wp_mail_failed",function($wp_error){
-    write_log($wp_error);
-});
-
-if ( ! function_exists('write_log')) {
-    function write_log ( $log )  {
-       if ( is_array( $log ) || is_object( $log ) ) {
-          error_log( print_r( $log, true ) );
-       } else {
-          error_log( $log );
-       }
-    }
- }
 
 
 
