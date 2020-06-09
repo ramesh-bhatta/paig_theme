@@ -10,7 +10,17 @@ require get_template_directory() . "/inc/menus/class-bootstrap-navwalker.php";
 
 require get_template_directory() ."/inc/custom-block.php";
 
+require get_template_directory() ."/inc/home-meta-field.php";
+
 require get_template_directory() ."/inc/contact_email.php";
+
+
+
+
+
+
+define("VUE_COMPONENT_URL", get_template_directory_uri() . "/assets/vue/components/");
+
 
 add_action('after_setup_theme', 'theme_setup');
 
