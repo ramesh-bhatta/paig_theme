@@ -1,5 +1,8 @@
 <?php
+define("PAIG_THEME_VERSION","1.0");
+define("PAIG_THEME_URL", get_template_directory_uri());
 
+require get_template_directory() ."/inc/theme-setup.php";
 
 require get_template_directory() . "/inc/customizer.php";
 
@@ -15,10 +18,8 @@ require get_template_directory() ."/inc/contact_email.php";
 
 
 
+
 define("VUE_COMPONENT_URL", get_template_directory_uri() . "/assets/vue/components/");
-define("PAIG_THEME_URL", get_template_directory_uri());
-
-
 
 
 add_action('after_setup_theme', 'theme_setup');
