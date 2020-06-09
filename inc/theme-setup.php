@@ -24,5 +24,5 @@ function install_home_page($page_name){
         'post_name'=>$page_name,
         'post_type'=>'page'
     );
-    wp_insert_post($post);  
+    // wp_insert_post($post);  
 }
