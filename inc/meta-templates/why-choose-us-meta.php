@@ -18,7 +18,11 @@ $service_arr=getServiceMeta($post_id);
                     </div>
                     <div class="mb-2">
                         <input class="w-full" type="text" name="service_title[]" 
-                            value="<?php echo esc_textarea($service["title"]) ?>" />
+                            value="<?php echo esc_textarea($service["title"]) ?>" placeholder="Title"/>
+                    </div>
+                    <div class="mb-2">
+                        <input class="w-full" type="text" name="service_iconClass[]" 
+                            value="<?php echo isset($service['iconClass'])?$service['iconClass']:""; ?>" placeholder="Icon Class"/>
                     </div>
                     <div class="mb-2">
                         <?php 
@@ -38,7 +42,7 @@ $service_arr=getServiceMeta($post_id);
                         
                     </div>
                     <div class="mb-2">
-                        <textarea class="w-full" name="service_content[]" rows="5">
+                        <textarea class="w-full" name="service_content[]" rows="5" placeholder="Short Description">
                             <?php echo esc_textarea($service["content"]); ?>
                         </textarea>
                     </div>

@@ -8,73 +8,33 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-3 col-sm-6">
-                <!-- Icon Box -->
-                <div class="icon-box-1">
+            <?php
+            $post_id = get_option('page_on_front');
+            $offer_arr = getOfferMeta($post_id);
+           
 
-                    <div class="icon-container">
-                        <i class="im im-icon-Office"></i>
-                        <div class="icon-links">
-                            <a href="listings-grid-standard-with-sidebar.html">For Sale</a>
-                            <a href="listings-grid-standard-with-sidebar.html">For Rent</a>
+            foreach ($offer_arr as $offer) :
+            ?>
+
+                <div class="col-md-3 col-sm-6">
+                    <!-- Icon Box -->
+                    <div class="icon-box-1">
+                        <div class="icon-container">
+                            <i class="<?php echo $offer['iconClass']; ?>"></i>
+                            <div class="icon-links">
+                                <a href="listings-grid-standard-with-sidebar.html">For Sale</a>
+                                <a href="listings-grid-standard-with-sidebar.html">For Rent</a>
+                            </div>
                         </div>
+
+                        <h3><?php echo isset($offer['title']) ? $offer['title'] : ""; ?></h3>
+                        <p><?php echo isset($offer['content']) ? $offer['content'] : ""; ?></p>
                     </div>
-
-                    <h3>Apartments</h3>
-                    <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
                 </div>
-            </div>
 
-            <div class="col-md-3 col-sm-6">
-                <!-- Icon Box -->
-                <div class="icon-box-1">
+            <?php endforeach; ?>
 
-                    <div class="icon-container">
-                        <i class="im im-icon-Home-2"></i>
-                        <div class="icon-links">
-                            <a href="listings-grid-standard-with-sidebar.html">For Sale</a>
-                            <a href="listings-grid-standard-with-sidebar.html">For Rent</a>
-                        </div>
-                    </div>
 
-                    <h3>Houses</h3>
-                    <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <!-- Icon Box -->
-                <div class="icon-box-1">
-
-                    <div class="icon-container">
-                        <i class="im im-icon-Car-3"></i>
-                        <div class="icon-links">
-                            <a href="listings-grid-standard-with-sidebar.html">For Sale</a>
-                            <a href="listings-grid-standard-with-sidebar.html">For Rent</a>
-                        </div>
-                    </div>
-
-                    <h3>Garages</h3>
-                    <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <!-- Icon Box -->
-                <div class="icon-box-1">
-
-                    <div class="icon-container">
-                        <i class="im im-icon-Clothing-Store"></i>
-                        <div class="icon-links">
-                            <a href="listings-grid-standard-with-sidebar.html">For Sale</a>
-                            <a href="listings-grid-standard-with-sidebar.html">For Rent</a>
-                        </div>
-                    </div>
-
-                    <h3>Commercial</h3>
-                    <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
-                </div>
-            </div>
 
         </div>
     </div>
