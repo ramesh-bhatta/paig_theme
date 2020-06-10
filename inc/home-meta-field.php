@@ -81,6 +81,7 @@ function save_post_custom_meta_offer($post_id)
 
     $offers = [];
     $offer_title = isset($_POST['offer_title']) ? $_POST['offer_title'] : "";
+    $offer_iconClass = isset($_POST['offer_iconClass']) ? $_POST['offer_iconClass'] : "";
     $offer_icons = isset($_POST['offer_image_icon']) ? $_POST['offer_image_icon'] : "";
     $offer_desc = isset($_POST['offer_content']) ? $_POST['offer_content'] : "";
 
@@ -90,6 +91,7 @@ function save_post_custom_meta_offer($post_id)
             for ($i = 0; $i < count($offer_title); $i++) {
                 $offers = array(
                     "title" => sanitize_text_field($offer_title[$i]),
+                    "iconClass" => sanitize_text_field($offer_iconClass[$i]),
                     "icon" => sanitize_text_field($offer_icons[$i]),
                     "content" => sanitize_text_field($offer_desc[$i])
                 );
@@ -171,6 +173,7 @@ function save_post_custom_meta_service($post_id)
 
     $services = [];
     $services_title = isset($_POST["service_title"]) ? $_POST["service_title"] : isset($_POST["service_title"]);
+    $services_iconClass = isset($_POST["service_iconClass"]) ? $_POST["service_iconClass"] : isset($_POST["service_iconClass"]);
     $service_icons = isset($_POST["service_image_icon"]) ? $_POST["service_image_icon"] : "";
     $services_content = isset($_POST["service_content"]) ? $_POST["service_content"] : "";
 
@@ -180,6 +183,7 @@ function save_post_custom_meta_service($post_id)
             for ($i = 0; $i < count($services_title); $i++) {
                 $services = array(
                     "title" => sanitize_text_field($services_title[$i]),
+                    "iconClass" => sanitize_text_field($services_iconClass[$i]),
                     "icon" => sanitize_text_field($service_icons[$i]),
                     "content" => sanitize_text_field($services_content[$i]),
                 );

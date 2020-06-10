@@ -1,6 +1,5 @@
 <?php
 $offer_arr = getOfferMeta($post_id);
-
 ?>
 
 <a href="#" class="mb-2" id="add_offer" style="text-decoration:none;">
@@ -18,15 +17,21 @@ $offer_arr = getOfferMeta($post_id);
                         <div class="mb-2 text-right">
                             <span class="dashicons dashicons-dismiss remove-offer text-red-500"></span>
                         </div>
+
                         <div class="mb-2">
-                            <input class="w-full" type="text" name="offer_title[]" value="<?php echo esc_textarea($offer["title"]) ?>" />
+                            <input class="w-full" type="text" name="offer_title[]" value="<?php echo esc_textarea($offer["title"]) ?>" placeholder="Title" />
                         </div>
                         <div class="mb-2">
+                            <input class="w-full" type="text" name="offer_iconClass[]" value="<?php echo esc_textarea(isset($offer['iconClass']) ? $offer['iconClass'] : '') ?>" placeholder="icon class" />
+                        </div>
 
-                        <?php 
-                        $imgUrl = isset($offer["icon"])?$offer["icon"]:"";
-                        ?>
-                            <input type="hidden" class="paig-img-url" name="offer_image_icon[]" value="<?php echo $imgUrl; ?>"/>
+
+                        <div class="mb-2">
+
+                            <?php
+                            $imgUrl = isset($offer["icon"]) ? $offer["icon"] : "";
+                            ?>
+                            <input type="hidden" class="paig-img-url" name="offer_image_icon[]" value="<?php echo $imgUrl; ?>" />
                             <?php
                             $btn_text = "Upload Image";
                             $img_class = "hidden";
@@ -40,7 +45,7 @@ $offer_arr = getOfferMeta($post_id);
 
                         </div>
                         <div class="mb-2">
-                            <textarea class="w-full" name="offer_content[]" rows="5">
+                            <textarea class="w-full" name="offer_content[]" rows="5" placeholder="Short Description">
                             <?php echo esc_textarea($offer["content"]); ?>
                         </textarea>
                         </div>
@@ -48,7 +53,8 @@ $offer_arr = getOfferMeta($post_id);
 
                 </div>
             </div>
-    <?php endforeach; endif; ?>
+    <?php endforeach;
+    endif; ?>
 
 
 

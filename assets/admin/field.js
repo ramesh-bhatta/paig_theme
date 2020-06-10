@@ -32,9 +32,6 @@
             $(parent).remove();
         });
 
-
-
-
         // code for offer goes here
 
         $("#offer-block").sortable({
@@ -47,14 +44,14 @@
             add_new_item('offer');
         });
 
-        $(document).on("click",'.remove-offer',function(e){
+        $(document).on("click", '.remove-offer', function (e) {
             e.preventDefault();
             let parent = $(this).closest(".offer-item");
             $(parent).remove();
         });
 
-         // btnContext=;
-         $(document).on("click", '.wk-offer-button', function (e) {
+        // btnContext=;
+        $(document).on("click", '.wk-offer-button', function (e) {
             e.preventDefault();
             // console.log("ok");
             btnContext = $(this);
@@ -67,9 +64,6 @@
             wkMedia.open();
         });
 
-
-
-
     });
 
     function add_new_item(prefixClass) {
@@ -81,7 +75,10 @@
         html += '<span class="dashicons dashicons-dismiss remove-' + prefixClass + ' text-red-500"></span>';
         html += '</div>';
         html += '<div class="mb-2">';
-        html += '<input class="w-full" type="text" name="' + prefixClass + '_title[]" value="" />';
+        html += '<input class="w-full" type="text" name="' + prefixClass + '_title[]" value="" placeholder="Title" />';
+        html += '</div>';
+        html += '<div class="mb-2">';
+        html += '<input class="w-full" type="text" name="' + prefixClass + '_iconClass[]" value="" placeholder="Icon Class"/>';
         html += '</div>';
         html += '<div class="mb-2">';
         html += '<input type="hidden" class="paig-img-url" name="' + prefixClass + '_image_icon[]" />';
@@ -89,7 +86,7 @@
         html += '<button class="wk-button w-full py-2">Upload Image</button>';
         html += "</div>";
         html += '<div class="mb-2">';
-        html += '<textarea class="w-full" name="' + prefixClass + '_content[]" value="" rows="5"></textarea>';
+        html += '<textarea class="w-full" name="' + prefixClass + '_content[]" value="" rows="5" placeholder="Short Description"></textarea>';
         html += "</div>";
         html += '</div>';
         html += '</div>';
@@ -147,6 +144,6 @@
     }
 
 
-   
+
 
 })(jQuery);
