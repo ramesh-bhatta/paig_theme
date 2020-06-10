@@ -13,19 +13,11 @@
                 <!-- Icon Box -->
                 <div class="content">
                     <p class="text-justify" style="padding:0 60px;">
-                        Hashtag Portal is for builders, developers and agents. We connect property stock with buyers
-                        through our agency support model and digital network across Australia.
-                        Hashtag Portal is for builders, developers and agents. We connect property stock with buyers
-                        through our agency support model and digital network across Australia.
-                        Hashtag Portal is for builders, developers and agents. We connect property stock with buyers
-                        through our agency support model and digital network across Australia.
-                        Hashtag Portal is for builders, developers and agents. We connect property stock with buyers
-                        through our agency support model and digital network across Australia.Hashtag Portal is for builders, developers and agents. We connect property stock with buyers
-                        through our agency support model and digital network across Australia.
-                        Hashtag Portal is for builders, developers and agents. We connect property stock with buyers
-                        through our agency support model and digital network across Australia.
-
-
+                        <?php
+                        $post_id = get_option('page_on_front');
+                        $about_content = get_post_meta($post_id, 'what_we_do_desc', true);
+                        echo $about_content;
+                        ?>
                     </p>
 
                 </div>
@@ -34,5 +26,5 @@
         </div>
     </div>
 </section>
-<br/>
+<br />
 <!-- Fullwidth Section / End -->
