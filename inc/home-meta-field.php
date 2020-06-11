@@ -217,10 +217,15 @@ function save_post_custom_meta_service($post_id)
 function getServiceCustomMeta($post_id)
 {
     $custom_meta = get_post_meta($post_id);
+    if (!is_array($custom_meta)) {
+        $custom_meta = [];
+    }
 
-    return array_filter($custom_meta, function ($value) {
+    $offer_arr = array_filter($custom_meta, function ($value) {
         return  strpos($value, "service_meta_") > -1;
     }, ARRAY_FILTER_USE_KEY);
+
+    return count($offer_arr) > 0 ? $offer_arr : [];
 }
 
 function getServiceMeta($post_id)
@@ -229,4 +234,6 @@ function getServiceMeta($post_id)
         return unserialize($value[0]);
     }, getServiceCustomMeta($post_id));
     return $service_array;
+
+   
 }
