@@ -8,10 +8,11 @@
     <div class="container">
         <div class="row">
 
+        
+
             <?php
             $post_id = get_option('page_on_front');
             $offer_arr = getOfferMeta($post_id);
-           
 
             foreach ($offer_arr as $offer) :
             ?>
