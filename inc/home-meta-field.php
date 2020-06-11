@@ -122,17 +122,19 @@ function getOfferCustomMeta($post_id)
 {
     $custom_meta = get_post_meta($post_id);
 
+    if (!is_array($custom_meta)) {
+        $custom_meta = [];
+    }
+
     $offer_arr =  array_filter($custom_meta, function ($value) {
         return  strpos($value, "offer_meta_") > -1;
     }, ARRAY_FILTER_USE_KEY);
 
-    return count($offer_arr)>0?$offer_arr:[];
+    return count($offer_arr) > 0 ? $offer_arr : [];
 }
 
 function getOfferMeta($post_id)
 {
-   
-    
     $offer_array = array_map(function ($value) {
         return unserialize($value[0]);
     }, getOfferCustomMeta($post_id));
