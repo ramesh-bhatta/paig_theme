@@ -221,11 +221,11 @@ function getServiceCustomMeta($post_id)
         $custom_meta = [];
     }
 
-    $offer_arr = array_filter($custom_meta, function ($value) {
+    $service_arr = array_filter($custom_meta, function ($value) {
         return  strpos($value, "service_meta_") > -1;
     }, ARRAY_FILTER_USE_KEY);
 
-    return count($offer_arr) > 0 ? $offer_arr : [];
+    return count($service_arr) > 0 ? $service_arr : [];
 }
 
 function getServiceMeta($post_id)
