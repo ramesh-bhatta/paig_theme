@@ -26,7 +26,6 @@
 		<!-- Header Container
 ================================================== -->
 		<header id="header-container">
-
 			<!-- Topbar -->
 			<div id="top-bar">
 				<div class="container">
@@ -46,7 +45,6 @@
 
 						<!-- Left Side Content -->
 						<div class="flex flex-wrap items-center">
-
 							<!-- Social Icons -->
 							<ul class="social-icons">
 								<?php $socialItems = getPaigSocialMedia();
@@ -61,7 +59,6 @@
 								<?php endif;
 								endforeach; ?>
 							</ul>
-
 						</div>
 						<!-- Left Side Content / End -->
 
