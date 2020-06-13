@@ -8,7 +8,7 @@
             let comments=$("#comments").val();
             let phone = $("#phone").val();
 
-            console.log("phhone "+phone);
+            console.log("phone "+phone);
 
             $.post({
                 url:myAjax.ajaxurl,
