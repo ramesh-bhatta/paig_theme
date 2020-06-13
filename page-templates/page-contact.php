@@ -1,13 +1,4 @@
-<?php
-/*
-Template Name: Contact Page
-Template Post Type: post, page, event
-*/
-
-use PAIG\Common\Option;
-
-get_header(); ?>
-
+<?php get_header(); ?>
 <div class="parallax" data-background="<?php bloginfo('template_directory'); ?>/images/home-parallax.jpg" data-color="#36383e" data-color-opacity="0.45" data-img-width="2500" data-img-height="1600">
     <div class="parallax-content">
         <div class="container">
@@ -20,9 +11,6 @@ get_header(); ?>
 
     </div>
 </div>
-
-
-
 <!-- Container / Start -->
 <div class="container margin-top-55">
 
@@ -72,4 +60,6 @@ get_header(); ?>
     <!-- Map Container / End -->
 
 
-    <?php get_footer(); ?>
+</div>
+
+<?php get_footer(); ?>
