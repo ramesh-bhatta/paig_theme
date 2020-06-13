@@ -8,6 +8,7 @@ function contact_form_enquerer()
 {
     wp_register_script("custom_mail", PAIG_THEME_URL . '/scripts/custom_mail.js', array('jquery'));
 
+    //pass wordpress variable to custom_mail.js file
     wp_localize_script('custom_mail', 'myAjax', array(
         'ajaxurl' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce("contact_security_nonce")
@@ -16,8 +17,10 @@ function contact_form_enquerer()
 }
 
 
+//wordpress to submit form through ajax
 add_action("wp_ajax_custom_form_submit", "custom_form_submit");
 add_action("wp_ajax_nopriv_custom_form_submit", "custom_form_submit");
+
 function custom_form_submit()
 {
 

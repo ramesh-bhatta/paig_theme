@@ -4,51 +4,6 @@
 
 $(document).ready(function(){
 
-	$(document).on("render-carousel",function(e){
-		console.log("ok");
-		$('.carousel').owlCarousel({
-			autoPlay: false,
-			navigation: true,
-			slideSpeed: 600,
-			items : 3,
-			itemsDesktop : [1239,3],
-			itemsTablet : [991,2],
-			itemsMobile : [767,1]
-		});
-
-
-		$('.logo-carousel').owlCarousel({
-			autoPlay: false,
-			navigation: true,
-			slideSpeed: 600,
-			items : 5,
-			itemsDesktop : [1239,4],
-			itemsTablet : [991,3],
-			itemsMobile : [767,1]
-		});
-
-
-		$('.listing-carousel').owlCarousel({
-			autoPlay: false,
-			navigation: true,
-			slideSpeed: 800,
-			items : 1,
-			itemsDesktop : [1239,1],
-			itemsTablet : [991,1],
-			itemsMobile : [767,1]
-		});
-
-		$('.owl-next, .owl-prev').on("click", function (e) {
-			e.preventDefault();
-		});
-	});
-
-	$(document).on("refresh-carousel",function(e){
-		$('.listing-carousel').each(function(){
-			$(this).data('owlCarousel').reload();
-		});
-	});
-
 	/*--------------------------------------------------*/
 	/*  Mobile Menu - mmenu.js
 	/*--------------------------------------------------*/
