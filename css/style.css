@@ -2288,12 +2288,7 @@ a.adv-search-btn.active i.fa.fa-caret-up { transform: rotate(-540deg); }
 ------------------------------------- */
 
 /* Main input + button alignment */
-.main-search-input {
-	width: 100%;
-	position: relative;
-	margin-bottom: 18px;
-	display: flex;
-}
+
 
 .row.with-forms .main-search-input { margin-bottom: 0; }
 
@@ -4057,9 +4052,7 @@ ul.listing-details li {
 }
 
 .grid-layout .listing-item {
-	display: inline-block;
 	width: 47%;
-	float: left;
 	margin-left: 1.5%;
 	margin-right: 1.5%;
 	position: relative;
