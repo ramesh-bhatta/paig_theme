@@ -396,7 +396,8 @@ $(document).ready(function(){
 		// Positioning indicator arrow
 		var buttonWidth = $('.search-type label.active').width();
 		var arrowDist = $('.search-type label.active').position().left;
-		$('.search-type-arrow').css('left', arrowDist + (buttonWidth/2) );
+		
+		// $('.search-type-arrow').css('left', arrowDist + (buttonWidth/2) );
 
 		$('.search-type label').on('change', function() {
 		    $('.search-type input[type="radio"]').parent('label').removeClass('active');
