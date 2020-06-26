@@ -1,9 +1,9 @@
-<section class="why-choose-us" pt-100 pb-50" id="why-choose-us">
+<section class="why-choose-us" pt-10 pb-50" id="why-choose-us">
 
     <div class="container">
         <div class="row">
             <div class="col-xl-6 mx-auto text-center">
-                <div class="section-title mb-100 pt-100">
+                <div class="section-title pb-10">
                     <h4>Why Choose Us</h4>
                 </div>
             </div>
