@@ -1,30 +1,47 @@
+
+
+
+
 <!-- Fullwidth Section -->
-<section class="fullwidth margin-top-0 offer-section" data-background-color="#f7f7f7" id="what-we-do">
+<section class="fullwidth margin-top-0 offer-section" data-background-color="#f7f7f7" id="what-we-offer">
 
     <!-- Box Headline -->
-    <h3 class="headline-box">What We Offer</h3>
+    <h3 class="headline-box">What We Do</h3>
 
     <!-- Content -->
     <div class="container">
         <div class="row">
 
 
-            <div class="col-md-12 col-sm-12">
-                <!-- Icon Box -->
-                <div class="content">
-                    <p class="text-justify" style="padding:0 60px;">
-                        <?php
-                        $post_id = get_option('page_on_front');
-                        $about_content = get_post_meta($post_id, 'what_we_do_desc', true);
-                        echo $about_content;
-                        ?>
-                    </p>
 
+            <?php
+            $post_id = get_option('page_on_front');
+            $offer_arr = getOfferMeta($post_id);
+
+            foreach ($offer_arr as $offer) :
+            ?>
+
+                <div class="col-md-3 col-sm-6">
+                    <!-- Icon Box -->
+                    <div class="icon-box-1">
+                        <div class="icon-container">
+                            <i class="<?php echo $offer['iconClass']; ?>"></i>
+
+                        </div>
+
+                        <h3><?php echo isset($offer['title']) ? $offer['title'] : ""; ?></h3>
+                        <p><?php echo isset($offer['content']) ? $offer['content'] : ""; ?></p>
+                    </div>
                 </div>
-            </div>
+
+            <?php endforeach; ?>
+
+
 
         </div>
     </div>
 </section>
+<!-- Fullwidth Section / End -->
+
 <br />
 <!-- Fullwidth Section / End -->
