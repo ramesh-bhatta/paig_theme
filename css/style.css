@@ -2361,7 +2361,7 @@ section.search {
 
 section.search .main-search-box,
 section.search .more-search-options-container {
-	background-color: transparent;
+	/* background-color: transparent; */
 }
 
 h3.search-title {
