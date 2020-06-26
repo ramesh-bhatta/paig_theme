@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
 
-        
+
 
             <?php
             $post_id = get_option('page_on_front');
@@ -22,10 +22,7 @@
                     <div class="icon-box-1">
                         <div class="icon-container">
                             <i class="<?php echo $offer['iconClass']; ?>"></i>
-                            <div class="icon-links">
-                                <a href="listings-grid-standard-with-sidebar.html">For Sale</a>
-                                <a href="listings-grid-standard-with-sidebar.html">For Rent</a>
-                            </div>
+
                         </div>
 
                         <h3><?php echo isset($offer['title']) ? $offer['title'] : ""; ?></h3>
