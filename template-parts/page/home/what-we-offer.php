@@ -1,5 +1,5 @@
 <!-- Fullwidth Section -->
-<section class="fullwidth margin-top-0 offer-section why-choose-us" data-background-color="#f7f7f7" id="what-we-do">
+<section class="fullwidth margin-top-0 offer-section why-choose-us" data-background-color="#f7f7f7" id="what-we-offer">
 
 
 
@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col-xl-6 mx-auto text-center">
-                <div class="section-title mb-100 pt-100">
+                <div class="section-title pb-10">
                     <h4>What We Offer</h4>
                 </div>
             </div>
