@@ -6,8 +6,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-6">
-					<?php the_custom_logo(); ?>
-					<br><br>
+					<?php if (has_custom_logo()) : ?>
+					
+						<?php the_custom_logo(); ?>
+
+					<?php else: ?>
+						<h3> <?php bloginfo('name'); ?></h3>
+
+					<?php	endif; ?>
 
 				</div>
 
@@ -15,7 +21,7 @@
 					<h4>Helpful Links</h4>
 					<?php
 					wp_nav_menu(array(
-						'theme_location'=> 'footer_menu',
+						'theme_location' => 'footer_menu',
 						'menu_class'   => 'footer-links'
 					));
 					?>
@@ -27,21 +33,21 @@
 					<div class="text-widget">
 						<ul class="list-none address-block">
 							<li>
-								<a href="<?php getCustomThemeValue("address"); ?>">
+								<a href="<?php getCustomThemeValue("address", "100 Harris Street, Pyrmont"); ?>">
 									<i class="fa fa-globe"></i>
-									<?php echo getCustomThemeValue("address"); ?>
+									<?php echo getCustomThemeValue("address", "100 Harris Street, Pyrmont"); ?>
 								</a>
 							</li>
 							<li>
-								<a href="tel:<?php getCustomThemeValue("phone_number1"); ?>">
+								<a href="tel:<?php getCustomThemeValue("phone_number1", "1300047244"); ?>">
 									<i class="fa fa-phone-square"></i>
-									<?php echo getCustomThemeValue("phone_number1"); ?>
+									<?php echo getCustomThemeValue("phone_number1", "1300 00 PAIG"); ?>
 								</a>
 							</li>
 							<li>
-								<a href="mailto:<?php echo getCustomThemeValue("email_address"); ?>">
+								<a href="mailto:<?php echo getCustomThemeValue("email_address", "admin@paigtechnologies.com.au"); ?>">
 									<i class="fa fa-envelope-square"></i>
-									<?php echo getCustomThemeValue("email_address"); ?>
+									<?php echo getCustomThemeValue("email_address", "admin@paigtechnologies.com.au"); ?>
 								</a>
 							</li>
 						</ul>
@@ -77,7 +83,7 @@
 				<div class="col-md-4 col-xs-12">
 					<div class="cr">Copyright © <a href="<?php echo getCustomThemeValue("copyright_url") ?>" target="#">
 							<?php
-							echo getCustomThemeValue("copyright_text");
+							echo getCustomThemeValue("copyright_text","2020 NDIS Houses");
 							?>
 						</a></div>
 				</div>
@@ -91,9 +97,9 @@
 				</div>
 				<div class="col-md-4 col-xs-12">
 					<div class="pb">Powered By
-						<a href="<?php echo getCustomThemeValue("poweredby_url") ?>" target="#">
+						<a href="<?php echo getCustomThemeValue("poweredby_url","http://www.paigtechnologies.com.au/") ?>" target="#">
 							<?php
-							echo getCustomThemeValue("poweredby_text");
+							echo getCustomThemeValue("poweredby_text","PAIG Technologies");
 							?>
 						</a>
 					</div>
@@ -127,23 +133,20 @@
 
 <!-- Google Autocomplete -->
 <script>
-	function initAutocomplete() {
-		var input = document.getElementById('autocomplete-input');
-		var autocomplete = new google.maps.places.Autocomplete(input);
+	// function initAutocomplete() {
+	// 	var input = document.getElementById('autocomplete-input');
+	// 	var autocomplete = new google.maps.places.Autocomplete(input);
 
-		autocomplete.addListener('place_changed', function() {
-			var place = autocomplete.getPlace();
-			if (!place.geometry) {
-				window.alert("No details available for input: '" + place.name + "'");
-				return;
-			}
-		});
-	}
+	// 	autocomplete.addListener('place_changed', function() {
+	// 		var place = autocomplete.getPlace();
+	// 		if (!place.geometry) {
+	// 			window.alert("No details available for input: '" + place.name + "'");
+	// 			return;
+	// 		}
+	// 	});
+	// }
 </script>
 
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
 
 </div>
 <!-- Wrapper / End -->
