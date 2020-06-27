@@ -3,7 +3,7 @@
 <head>
 
 	<!-- Basic Page Needs ================================================== -->
-	<title>PAIG Buidling Services <?php bloginfo("title"); ?></title>
+	<title> <?php bloginfo("title"); ?></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -11,9 +11,6 @@
 	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/css/style.css">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/css/user.css">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/css/color.css">
-
-	<!-- for leafletlet map -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
 
 
 	<?php wp_head(); ?>
@@ -35,8 +32,13 @@
 
 							<!-- Top bar -->
 							<ul class="top-bar-menu">
-								<li><i class="fa fa-phone"></i><a href="tel:1300007244"> <?php echo getCustomThemeValue("phone_number1") ?> </a> </li>
-								<li><i class="fa fa-envelope"></i> <a href="mailto:<?php echo getCustomThemeValue("email_address") ?>"><?php echo getCustomThemeValue("email_address") ?> </a></li>
+								<li><i class="fa fa-phone"></i>
+									<a href="tel:<?php echo getCustomThemeValue("phone_number1", "130000 PAIG") ?>"> <?php echo getCustomThemeValue("phone_number1", "130000 PAIG") ?>
+									</a>
+								</li>
+								<li><i class="fa fa-envelope"></i>
+									<a href="mailto:<?php echo getCustomThemeValue("email_address", "admin@paigtechnologies.com.au") ?>"><?php echo getCustomThemeValue("email_address", "admin@paigtechnologies.com.au") ?>
+									</a></li>
 							</ul>
 
 						</div>
@@ -79,7 +81,16 @@
 
 						<!-- Logo -->
 						<div id="logo" class="flex-1">
-							<a href="index.php"><?php the_custom_logo(); ?></a>
+							<?php if (has_custom_logo()) :
+								the_custom_logo();
+
+							else : ?>
+								<h3> <?php bloginfo('name'); ?></h3>
+
+							<?php
+							endif;
+							?>
+
 						</div>
 
 						<!-- Mobile Navigation -->

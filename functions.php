@@ -112,9 +112,9 @@ function getCFSValue($name)
     }
 }
 
-function getCustomThemeValue($name)
+function getCustomThemeValue($name,$default_value="")
 {
-    return !empty(get_theme_mod($name)) ? get_theme_mod($name) : null;
+    return !empty(get_theme_mod($name)) ? get_theme_mod($name) : $default_value;
 }
 
 
