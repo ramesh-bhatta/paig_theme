@@ -123,16 +123,19 @@ function getCustomThemeValue($name,$default_value="")
 /**
  * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
  */
-add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
-function add_admin_link($items, $args)
-{
-    $link = get_theme_mod("login_url");
 
-    if ($args->theme_location == 'primary_menu') {
-        $items .= "<li>
-                    <a href='{$link}' class='sign-in' target='__blank'>
-                        <i class='fa fa-user'></i> Log In / Register 
-                    </a></li>";
-    }
-    return $items;
-}
+
+// add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+// function add_admin_link($items, $args)
+// {
+//     $link = get_theme_mod("login_url");
+
+//     if ($args->theme_location == 'primary_menu') {
+//         $items .= "<li>
+//                     <a href='{$link}' class='sign-in' target='__blank'>
+//                         <i class='fa fa-user'></i> Log In / Register 
+//                     </a></li>";
+//     }
+//     return $items;
+// }
+
