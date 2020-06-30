@@ -14,6 +14,10 @@ html {
          z-index: 99;
      }
 
+     .top-bar-menu li a:hover{
+         color:#444 !important;
+     }
+
 /* css for footer section÷ */
 
 .footer-top  .address-block{
@@ -158,6 +162,8 @@ float:right;
     font-size: 15px;
     line-height: 1.8;
 }
+
+
 
 
 

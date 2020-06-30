@@ -26,7 +26,7 @@
 			<!-- Topbar -->
 			<div id="top-bar">
 				<div class="container">
-					<div class="flex flex-wrap justify-between px3">
+					<div class="flex flex-wrap justify-between md:px-5">
 						<!-- Left Side Content -->
 						<div class="p">
 
@@ -60,7 +60,12 @@
 										</li>
 								<?php endif;
 								endforeach; ?>
+
 							</ul>
+							<div class="login-hub flex-1">
+							
+								<a href="<?php echo getCustomThemeValue("login_url", "https://paighub.paig.com.au/auth/login") ?>" class="sign-in text-white pl-5 pt-1"><i class="fa fa-user"></i> Log In / Register</a>
+							</div>
 						</div>
 						<!-- Left Side Content / End -->
 
