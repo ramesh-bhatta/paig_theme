@@ -82,7 +82,7 @@
 				<div class="container">
 
 
-					<div class="flex items-center">
+					<div class="flex items-center justify-between">
 
 						<!-- Logo -->
 						<div id="logo" class="flex-1">
@@ -120,7 +120,7 @@
 							));
 							?>
 						</nav>
-						<div class="clearfix"></div>
+						
 						<!-- Main Navigation / End -->
 
 					</div>
