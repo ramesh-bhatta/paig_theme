@@ -510,11 +510,11 @@ $(document).ready(function(){
     /*----------------------------------------------------*/
     /*  Searh Form More Options
     /*----------------------------------------------------*/
-    $('.more-search-options-trigger').on('click', function(e){
-    	e.preventDefault();
-		$('.more-search-options, .more-search-options-trigger').toggleClass('active');
-		$('.more-search-options.relative').animate({height: 'toggle', opacity: 'toggle'}, 300);
-	});
+    // $('.more-search-options-trigger').on('click', function(e){
+    // 	e.preventDefault();
+	// 	$('.more-search-options, .more-search-options-trigger').toggleClass('active');
+	// 	$('.more-search-options.relative').animate({height: 'toggle', opacity: 'toggle'}, 300);
+	// });
 
 
 	/*----------------------------------------------------*/
