@@ -59,7 +59,7 @@
                 <div class="container flex flex-wrap items-center">
 
                     <!-- Left Side Content -->
-                    <div class="left-side">
+                    <div class="left-side flex flex-wrap justify-end">
 
                         <!-- Logo -->
                         <div id="logo" class="margin-top-10">
