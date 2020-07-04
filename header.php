@@ -59,7 +59,7 @@
                 <div class="container flex flex-wrap items-center">
 
                     <!-- Left Side Content -->
-                    <div class="left-side flex flex-wrap justify-end">
+                    <div class="left-side flex flex-wrap justify-between items-center">
 
                         <!-- Logo -->
                         <div id="logo" class="margin-top-10">
@@ -90,7 +90,7 @@
                     <div class="right-side">
                         <div class="block md:flex flex-wrap items-center justify-end">
                             <!-- Social Icons -->
-                            <ul class="social-icons">
+                            <ul class="social-icons mb-0">
                                 <?php $socialItems = getPaigSocialMedia();
                                 foreach ($socialItems as $socialItem) :
                                     if (!empty(getCustomThemeValue($socialItem))) :
