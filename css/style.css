@@ -213,6 +213,7 @@ ul.top-bar-menu li i {
 ------------------------------------- */
 #logo { display: inline-block; margin-top: 1px; }
 
+.social-icons li {}
 
 img.footer-logo { max-height: 43px; width: auto; transform: translate3d(0,0,0); }
 
@@ -9865,7 +9866,7 @@ body .notification strong { border: none; }
 
 .social-icons li {
 	display: inline;
-	float: left;
+	/*float: left;*/
 	text-align: left;
 	margin-right: 16px;
 	margin-top: 11px;
