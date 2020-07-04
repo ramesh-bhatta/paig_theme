@@ -88,7 +88,7 @@
 
                     <!-- Right Side Content / End -->
                     <div class="right-side">
-                        <div class="flex flex-wrap items-center text-right">
+                        <div class="block md:flex flex-wrap items-center justify-end">
                             <!-- Social Icons -->
                             <ul class="social-icons">
                                 <?php $socialItems = getPaigSocialMedia();
@@ -104,7 +104,7 @@
                                 endforeach; ?>
 
                             </ul>
-                            <div class="login-hub flex-1">
+                            <div class="login-hub">
                                 <a href="<?php echo getCustomThemeValue("login_url", "https://paighub.paig.com.au/auth/login") ?>" class="sign-in pl-5 pt-1"><i class="fa fa-user"></i> Log In / Register</a>
                             </div>
                         </div>
