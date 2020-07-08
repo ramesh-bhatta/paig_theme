@@ -12452,7 +12452,7 @@ body .daterangepicker .drp-buttons button.cancelBtn {
 	.parallax #titlebar { padding: 60px 0; }
 
 	#navigation.style-2.cloned {
-		display: none;
+		display: block;
 	}
 
 	#backtotop { display: none; opacity: 0; visibility: hidden; }
