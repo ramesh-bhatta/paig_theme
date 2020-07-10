@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-
+<html translate="no">
 <head>
 
 	<!-- Basic Page Needs ================================================== -->
 	<title> <?php bloginfo("title"); ?></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google" content="notranslate">
 
 	<!-- CSS ================================================== -->
 	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/css/style.css">
