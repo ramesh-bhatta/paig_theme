@@ -189,5 +189,5 @@ add_action( 'customize_register', 'paig_metadata_customize_register' );
 
 
 function getPaigSocialMedia(){
-    return ["facebook","youtube","instagram","linkedin"];
+    return ["facebook","twitter","youtube","instagram","linkedin"];
 }
