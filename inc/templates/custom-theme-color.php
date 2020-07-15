@@ -21,4 +21,8 @@ $theme_primary_color =   getCustomThemeValue("primary_color", "#000000");
     .why-choose-us .single-service:hover i.fa{
         background-color:<?php echo $theme_primary_color; ?>;
     }
+
+   #footer .footer-bottom{
+        background-color:<?php echo $theme_primary_color; ?>;
+    }
 </style>
