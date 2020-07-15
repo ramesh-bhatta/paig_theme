@@ -105,10 +105,10 @@
                                    class="sign-in pl-5 pt-1 px-16 block">
                                     <i class="fa fa-user"></i> LOGIN</a>
                             </div>
-                            <div class="hashtag-portal-logo flex items-center w-1/2  md:w-auto">
+                            <div class="hashtag-portal-logo flex items-center w-1/2  md:w-auto" style="max-width:170px;">
                                 <?php
                                 $link = getCustomThemeValue("hashtag_link","#");
-                                $hashtag_portal_img_url = getCustomThemeValue("hashtag_portal_logo","https://hashtagportal.com/");
+                                $hashtag_portal_img_url = getCustomThemeValue("hashtag_portal_logo","https://www.hashtagportal.com/wp-content/uploads/1/2020/06/logo.png");
                                 ?>
                                 <a href="<?php echo $link; ?>" target="_blank">
 
