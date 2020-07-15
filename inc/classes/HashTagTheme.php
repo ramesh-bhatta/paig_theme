@@ -145,7 +145,8 @@ if(!class_exists("HashTagTheme")){
         private function storeCustomizerValues(){
             $social_links=[
                 "facebook"=>"https://www.facebook.com/paigtechnologies/",
-                "youtube"=>"https://www.youtube.com/channel/UCmRUGH5lgfDvFEklCerXOUA/featured",
+                "twitter"=>"https://twitter.com/PAIGTechnologi1/",
+                "youtube"=>"https://www.youtube.com/channel/UCmRUGH5lgfDvFEklCerXOUA/featured/",
                 "instagram"=>"https://www.instagram.com/paigtechnologies/",
                 "linkedin"=>"https://www.linkedin.com/company/paig-tech"
             ];
