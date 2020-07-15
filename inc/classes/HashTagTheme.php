@@ -33,11 +33,14 @@ if(!class_exists("HashTagTheme")){
             $home_page_id=$this->createPage("home","Home",true,$template);
             $about_page=$this->createPage("about","About");
             $contact_page=$this->createPage("contact","Contact",false,'page-templates/page-contact.php');
-            $privacy_page=$this->createPage('privacy-policy',"Privacy Policy",false);
-            $this->setupMenuItems($home_page_id,$about_page,$contact_page);
+            $privacy_page=$this->createPage('privacy-policy',"Privacy Policy");
+            $terms_use=$this->createPage('terms-condition',"Terms of Use");
+
+            $this->setupHeaderMenuItems($home_page_id,$about_page,$contact_page);
             $this->storeCustomizerValues();
             //set new version
             update_option("hashtag_theme_version",HASHTAG_THEME_VERSION);
+            flush_rewrite_rules(true);
         }
 
         private function createPage($page_slug,$title,$is_front=false,$template_name=""){
@@ -66,7 +69,7 @@ if(!class_exists("HashTagTheme")){
             return $post_id;
         }
 
-        private function setupMenuItems($home_page_id,$about_page_id,$contact_page_id){
+        private function setupHeaderMenuItems($home_page_id,$about_page_id,$contact_page_id){
             $menuName = "Header Menu";
             $menu = wp_get_nav_menu_object( $menuName );
             if($menu){
@@ -83,9 +86,40 @@ if(!class_exists("HashTagTheme")){
             ));
 
             wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('What We Do'),
+                'menu-item-url' => "/#what-we-do",
+                'menu-item-status' => 'publish',
+            ));
+
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('What We Offer'),
+                'menu-item-url' => "/#what-we-offer",
+                'menu-item-status' => 'publish',
+            ));
+
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('Why Choose Us'),
+                'menu-item-url' => "/#why-choose-us",
+                'menu-item-status' => 'publish',
+            ));
+
+
+            wp_update_nav_menu_item($menu_id, 0, array(
                 'menu-item-title' =>  __('Properties'),
                 'menu-item-url' => home_url( '/search_properties/' ),
                 'menu-item-status' => 'publish'));
+
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('Partners'),
+                'menu-item-url' => "/#partners",
+                'menu-item-status' => 'publish',
+            ));
+
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('Appeared In'),
+                'menu-item-url' => "/#appeared_in",
+                'menu-item-status' => 'publish',
+            ));
 
             wp_update_nav_menu_item($menu_id, 0, array(
                 'menu-item-title' =>  __('About'),
