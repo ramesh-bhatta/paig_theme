@@ -3,5 +3,9 @@
     <div class="parallax-content">
         <?php echo do_shortcode("[paig_property_search]"); ?>
     </div>
+
+    <div class="relative flex flex-wrap justify-center" style="z-index: 101;text-align: center;">
+        <h3 class="headline-box absolute" style="color:#000;top:-40px;">What We Do</h3>
+    </div>
 </div>
 
