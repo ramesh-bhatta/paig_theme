@@ -1,6 +1,4 @@
-<?php
-$service_arr=getServiceMeta($post_id);
-?>
+
 <a href="#" class="mb-2" id="add_services" style="text-decoration:none;">
     <span class="dashicons dashicons-plus-alt"></span> Add New Services
 </a>

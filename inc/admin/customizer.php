@@ -9,6 +9,7 @@ function paig_metadata_customize_register( $wp_customize ) {
         'capability'     => 'edit_theme_options',
         'title'          => 'Paig Site Meta',
     ));
+
             
     // Create our sections
 
@@ -102,6 +103,56 @@ function paig_metadata_customize_register( $wp_customize ) {
         'type'       => 'text',
     ) );
 
+    $wp_customize->add_setting('hashtag_portal_logo', array(
+        'type'=>'theme_mod',
+        'transport'      => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hashtag_portal_logo_control', array(
+        'label'             => "Hashtag Portal Logo",
+        'section'           => 'paig_custom_settings',
+        'settings'          => 'hashtag_portal_logo',
+    )));
+
+    $wp_customize->add_setting('hashtag_portal_logo_white', array(
+        'type'=>'theme_mod',
+        'transport'      => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hashtag_portal_logo_white_control', array(
+        'label'             => "Hashtag Portal White Logo",
+        'section'           => 'paig_custom_settings',
+        'settings'          => 'hashtag_portal_logo_white',
+    )));
+
+
+    $wp_customize->add_setting('hashtag_portal_url', array(
+        'type'=>'theme_mod',
+        'transport'      => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize->add_control( 'hashtag_portal_url',array(
+        'label'             => "Hashtag Portal URL",
+        'section'           => 'paig_custom_settings',
+        'settings'          => 'hashtag_portal_url',
+    ));
+
+
+    $wp_customize->add_setting('custom_logo_url', array(
+        'type'=>'theme_mod',
+        'transport'      => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize->add_control( 'custom_logo_url_control', array(
+        'label'             => "Custom Logo URL",
+        'section'           => 'paig_custom_settings',
+        'settings'          => 'custom_logo_url',
+    ));
+
 
     $wp_customize->add_section( 'paig_footer_settings' , array(
         'title'             => 'PAIG Footer Settings',
@@ -184,10 +235,61 @@ function paig_metadata_customize_register( $wp_customize ) {
         'type'       => 'text',
     ) );
 
+
+    // theme color settings
+    $wp_customize->add_panel( 'color_settings', array(
+        'capability'     => 'edit_theme_options',
+        'title'          => 'PAIG Theme Color',
+    ));
+    $wp_customize->add_section( 'paig_color_settings' , array(
+        'title'             => 'PAIG Color Settings',
+        'panel'             => 'color_settings',
+    ));
+
+    $wp_customize->add_setting( "primary_color" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'paig_theme_color',
+            array(
+                'label'      => "Theme Color",
+                'section'    => 'paig_color_settings',
+                'settings'   => 'primary_color',
+            ) )
+    );
+
+
+
+    // theme layout settings
+    $wp_customize->add_panel( 'layout_setting', array(
+        'capability'     => 'edit_theme_options',
+        'title'          => 'PAIG Layout Settings',
+    ));
+    $wp_customize->add_section( 'paig_layout_settings' , array(
+        'title'             => 'PAIG Layout Settings',
+        'panel'             => 'layout_settings',
+    ));
+
+    $wp_customize->add_setting( "header_layout_type" , array(
+        'type'          => 'theme_mod',
+        'transport'     => 'refresh',
+    ));
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'paig_theme_color',
+            array(
+                'label'      => "Theme Color",
+                'section'    => 'paig_color_settings',
+                'settings'   => 'primary_color',
+            ) )
+    );
+
+
 }
 add_action( 'customize_register', 'paig_metadata_customize_register' );
-
-
-function getPaigSocialMedia(){
-    return ["facebook","twitter","youtube","instagram","linkedin"];
-}
