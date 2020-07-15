@@ -31,7 +31,7 @@ function view_postMeta($template, $data)
 }
 
 function getPaigSocialMedia(){
-    return ["facebook","youtube","instagram","linkedin"];
+    return ["facebook","twitter","youtube","instagram","linkedin"];
 }
 
 function getCustomMetaValues($post_id,$custom_meta_key){
