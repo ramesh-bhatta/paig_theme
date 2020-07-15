@@ -1,8 +1,5 @@
 <!-- Fullwidth Section -->
 <section class="fullwidth margin-top-0 offer-section why-choose-us" data-background-color="#f7f7f7" id="what-we-offer">
-
-
-
     <!-- Content -->
     <div class="container">
 

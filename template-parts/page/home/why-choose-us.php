@@ -11,7 +11,7 @@
         <div class="row">
             <?php
             $post_id = get_option('page_on_front');
-            $service_arr = getServiceMeta($post_id);
+            $service_arr = getServiceMetaValues($post_id);
 
 
             foreach ($service_arr as $service) :
