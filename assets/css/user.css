@@ -1,0 +1,194 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+#logo img { 
+    height:auto;
+    width:auto;
+     }
+
+
+
+     /* css for offer section */
+     .offer-section{
+         z-index: 99;
+     }
+
+/* css for footer section÷ */
+
+.footer-top  .address-block{
+  padding-left:0px;
+}
+.footer-top  .address-block a{
+  color:#707070;
+}
+
+.footer-bottom{
+background:#6DB6E5;
+padding:20px 0 10px 0;
+color:#fff;
+}
+
+.footer-bottom a{
+color:#eee;
+}
+
+.footer-bottom .pb{
+float:right;
+}
+
+#footer img.custom-logo{
+    max-width: 225px;
+    height: auto;
+}
+
+
+
+.why-choose-us .section-title {
+    position: relative
+}
+.why-choose-us .section-title p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.why-choose-us .section-title h4 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 20px;
+    display: inline-block
+}
+.why-choose-us .section-title h4:before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #d8d8d8;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40px;
+}
+.why-choose-us .section-title h4:after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+}
+.why-choose-us .pt-100 {
+    padding-top: 100px;
+}
+.why-choose-us .pb-100 {
+    padding-bottom: 100px;
+}
+.why-choose-us .mb-100{
+    margin-bottom:100px;
+}
+.why-choose-us {
+    background-color: #FBFBFB;
+}
+.why-choose-us .single-service {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    padding: 30px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16)
+}
+.why-choose-us .single-service:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #5caee2;
+    left: 0;
+    top: 0;
+    content: "";
+    -webkit-transition: .3s;
+    transition: .3s
+}
+.why-choose-us .single-service:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #5caee2;
+    right: 0;
+    bottom: 0;
+    content: "";
+    -webkit-transition: .3s;
+    transition: .3s
+}
+.why-choose-us .single-service:hover:after,
+.why-choose-us .single-service:hover:before {
+    width: 50%;
+    height: 2px;
+    -webkit-transition: .3s;
+    transition: .3s
+}
+.why-choose-us .single-service:hover {
+    box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.10)
+}
+.why-choose-us .single-service i.fa {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    line-height: 60px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    -webkit-transition: .3s;
+    transition: .3s
+}
+.why-choose-us .single-service:hover i.fa {
+    background-color: #5caee2;
+    color: #fff;
+    border-color: #5caee2;
+    border-radius: 0;
+}
+.why-choose-us .single-service h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.why-choose-us .single-service p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+
+#navigation.style-1 ul li.portal-logo img{
+    max-height:28px;
+}
+
+#navigation.style-1 ul li.portal-logo{
+    background:#fff;
+}
+#navigation.style-1 ul li.portal-logo:hover{
+    background:none;
+    background:#fff;
+}
+
+#navigation.style-1 ul li.portal-logo a{
+    padding-top:0;
+    /*pointer-events: none;*/
+}
+
+.mm-panel ul.mm-listview li.portal-logo{
+    background:#eee;
+}
+
+
+.top-bar-menu li a:hover{
+    color:#eee;
+}
+
+
+
+

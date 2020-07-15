@@ -1,6 +1,3 @@
-<?php
-$offer_arr = getOfferMeta($post_id);
-?>
 
 <a href="#" class="mb-2" id="add_offer" style="text-decoration:none;">
     <span class="dashicons dashicons-plus-alt"></span> Add New Offer
@@ -25,7 +22,6 @@ $offer_arr = getOfferMeta($post_id);
                             <input class="w-full" type="text" name="offer_iconClass[]" value="<?php echo esc_textarea(isset($offer['iconClass']) ? $offer['iconClass'] : '') ?>" placeholder="icon class" />
                         </div>
 
-
                         <div class="mb-2">
 
                             <?php
@@ -45,9 +41,7 @@ $offer_arr = getOfferMeta($post_id);
 
                         </div>
                         <div class="mb-2">
-                            <textarea class="w-full" name="offer_content[]" rows="5" placeholder="Short Description">
-                            <?php echo esc_textarea($offer["content"]); ?>
-                        </textarea>
+                            <textarea class="w-full" name="offer_content[]" rows="5" placeholder="Short Description"><?php echo esc_textarea($offer["content"]); ?> </textarea>
                         </div>
                     </div>
 
