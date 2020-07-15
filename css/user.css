@@ -21,7 +21,7 @@ html {
 /* css for footer section÷ */
 
 .footer-top  .address-block{
-  padding-left:0px;
+  padding-left:0;
 }
 .footer-top  .address-block a{
   color:#707070;
