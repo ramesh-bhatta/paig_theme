@@ -26,3 +26,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #footer .footer-bottom a:hover{
     color:#c8c8c8;
 }
+
+.offer-section{
+    z-index: 80;
+}
