@@ -7,7 +7,7 @@
 
 
 
-<?php echo do_shortcode("[paig_property_list]"); ?>
+<?php echo do_shortcode("[paig_property_carousel]"); ?>
 
 <?php get_template_part("template-parts/page/home/what-we-offer"); ?>
 
