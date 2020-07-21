@@ -21,11 +21,11 @@
                     <!-- Icon Box -->
                     <div class="icon-box-1">
 
-                        <?php if ($offer['iconClass'] != null): ?>
+                        <?php if (!empty($offer['iconClass'])): ?>
                             <div class="icon-container">
                                 <i class="<?php echo $offer['iconClass']; ?>"></i>
                             </div>
-                        <?php elseif ($offer['icon'] !== null): ?>
+                        <?php elseif (!empty($offer['icon'])): ?>
                         <div class="paig-imb-block">
                             <img src="<?php echo $offer['icon']; ?>" class="object-fit"/>
                         </div>
