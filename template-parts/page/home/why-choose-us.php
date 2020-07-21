@@ -17,9 +17,9 @@
                 <div class="col-lg-4 col-md-6">
                     <!-- Single Service -->
                     <div class="single-service">
-                        <?php if ($service['iconClass'] != ''): ?>
+                        <?php if (!empty($service['iconClass'])): ?>
                             <i class="<?php echo $service['iconClass']; ?>"></i>
-                        <?php elseif ($service['icon'] !== ''): ?>
+                        <?php elseif (!empty($service['icon'])): ?>
                             <div class="paig-imb-block">
                                 <img src="<?php echo $service['icon']; ?>" class="object-fit"/>
                             </div>
