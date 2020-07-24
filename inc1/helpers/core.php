@@ -20,9 +20,7 @@ function body_template($name, $email, $phone, $message)
     return $str;
 }
 
-
-
-function get_template_view($template, $data)
+function view_postMeta($template, $data)
 {
     extract($data);
     ob_start();
@@ -31,20 +29,6 @@ function get_template_view($template, $data)
     ob_end_clean();
     echo $str;
 }
-
-function get_front_banner($banner_type){
-    $result=array();
-    $front_page_id=get_option( 'page_on_front' );
-    $banner_types=array("middle_banner","bottom_banner");
-    if(!empty($front_page_id)&&in_array($banner_type,$banner_types)){
-        $result["banner_text"]=get_post_meta($front_page_id,$banner_type."_text",true);
-        $result["banner_btn_text"]=get_post_meta($front_page_id,$banner_type."_btn_text",true);
-        $result["banner_image"]=get_post_meta($front_page_id,$banner_type."_image",true);
-        $result["banner_url"]=get_post_meta($front_page_id,$banner_type."_url",true);
-    }
-    return $result;
-}
-
 
 function getPaigSocialMedia(){
     return ["facebook","twitter","youtube","instagram","linkedin"];

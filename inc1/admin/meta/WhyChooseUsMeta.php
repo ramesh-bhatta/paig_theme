@@ -36,7 +36,7 @@ if(!class_exists("WhyChooseUsMeta")) {
                 }
 
                 //database offer value
-                $service_metas =  getCustomMetaValues($post_id,$this->meta_value_key);
+                $service_metas = $this->getMetaValues();
 
                 $total = isset($_POST["service_title"]) ? count($services_title) : 0;
                 //remove unnecessary field

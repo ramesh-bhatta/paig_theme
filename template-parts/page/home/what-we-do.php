@@ -44,5 +44,4 @@
 </section>
 <!-- Fullwidth Section / End -->
 
-<br/>
 <!-- Fullwidth Section / End -->

@@ -82,17 +82,21 @@
 			<div class="row">
 				<div class="col-md-4 col-xs-12">
 					<div class="cr">Copyright © <a href="<?php echo getCustomThemeValue("copyright_url") ?>" target="#">
-							<?php
-							echo getCustomThemeValue("copyright_text","2020 NDIS Houses");
-							?>
-						</a></div>
+                            <?php echo getCustomThemeValue("copyright_text", current_time('Y')." ".get_bloginfo("Name")); ?>
+						</a>
+                    </div>
 				</div>
 				<div class="col-md-4 col-xs-12">
 					<div class="privacy-div">
-						<ul class="list-inline text-center">
-							<li><a href="">Terms of Use</a></li>
-							<li><a href="">Privacy Policy</a></li>
-						</ul>
+                        <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'policy_menu',
+                            'menu_class' => 'list-inline text-center',
+                            'container' => 'ul',
+                            'menu_id' => 'responsive',
+                            'walker' => new WP_Bootstrap_Navwalker()
+                        ));
+                        ?>
 					</div>
 				</div>
 				<div class="col-md-4 col-xs-12">

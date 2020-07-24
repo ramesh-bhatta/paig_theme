@@ -44,11 +44,7 @@ if (!class_exists("HashTagContact")) {
             $subject = isset($_POST['subject']) ? sanitize_text_field($_POST['subject']) : "";
             $message = isset($_POST['comments']) ? sanitize_text_field($_POST['comments']) : "";
             $headers = array('Content-Type: text/html; charset=UTF-8');
-
-
-            $to = getCustomThemeValue("email_address", get_option("admin_email"));
-
-
+            $to = get_option("admin_email");
 
             $body = body_template($name, $email, $phone, $message);
 
