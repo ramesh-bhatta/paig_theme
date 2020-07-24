@@ -1,5 +1,9 @@
-<section class="why-choose-us py-24" pt-10 pb-50" id="why-choose-us">
+<?php
+$post_id=get_option("page_on_front");
+$service_arr = getServiceMetaValues($post_id);
+?>
 
+<section class="why-choose-us py-24 pt-10 pb-50" id="why-choose-us">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 mx-auto text-center">
@@ -9,11 +13,11 @@
             </div>
         </div>
         <div class="row">
-            <?php
-            $post_id = get_option('page_on_front');
-            $service_arr = getServiceMetaValues($post_id);
-            foreach ($service_arr as $service) :
-            ?>
+            <?php foreach ($service_arr as $service) : ?>
+                <?php
+                    $title=isset($service['title']) ? $service['title'] : "";
+                    $content=isset($service['content']) ? $service['content'] : "";
+                ?>
                 <div class="col-lg-4 col-md-6">
                     <!-- Single Service -->
                     <div class="single-service">
@@ -24,9 +28,8 @@
                                 <img src="<?php echo $service['icon']; ?>" class="object-fit"/>
                             </div>
                         <?php endif; ?>
-
-                        <h4><?php echo isset($service['title']) ? $service['title'] : ""; ?> </h4>
-                        <p><?php echo isset($service['content']) ? $service['content'] : ""; ?></p>
+                        <h4><?php echo $title  ?> </h4>
+                        <p><?php echo $content ?></p>
                     </div>
                 </div>
 
