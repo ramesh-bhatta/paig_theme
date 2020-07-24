@@ -12,7 +12,6 @@
             $offer_arr = getOfferMetaValues($post_id);
 
 
-
             foreach ($offer_arr as $offer) :
 
                 ?>

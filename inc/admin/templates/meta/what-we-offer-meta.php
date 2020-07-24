@@ -5,7 +5,7 @@
 <div id="offer-block" class="flex flex-wrap my-2">
     <input type="hidden" name="is_offer_page" value="true" />
 
-    <?php if (!empty($offer_arr)) :
+    <?php if(!empty($offer_arr)) :
         foreach ($offer_arr as $offer) :
     ?>
             <div class="offer-item w-1/3 my-3">
@@ -36,7 +36,7 @@
                                 $img_class = "";
                             }
                             ?>
-                            <img class="offer_img <?php echo $img_class ?>" src="<?php echo esc_url($offer["icon"]) ?>" width="100%" height="200px" style="object-fit:cover;" />
+                            <img class="offer_img <?php echo $img_class ?>" src="<?php echo esc_url(isset($offer["icon"])) ?>" width="100%" height="200px" style="object-fit:cover;" />
                             <button class="wk-offer-button w-full py-2"><?php echo $btn_text ?></button>
 
                         </div>

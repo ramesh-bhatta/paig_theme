@@ -43,7 +43,9 @@ if (!class_exists("HashTagTheme")) {
             $terms_page = $this->createPage('terms-of-use', "Terms of Use");
             $this->setupMenuItems($home_page_id, $about_page, $contact_page);
             $this->setupPolicyMenu($terms_page, $privacy_page);
-            $this->createHomeServices($home_page_id);
+            $this->createWhatWeDo($home_page_id);
+            $this->createWhatWeOffer($home_page_id); // what we offer is just description
+            $this->createWhyChooseUs($home_page_id);
 //            $this->storeCustomizerValues();
             //set new version
             update_option("hashtag_theme_version", HASHTAG_THEME_VERSION);
@@ -75,36 +77,86 @@ if (!class_exists("HashTagTheme")) {
             return $post_id;
         }
 
-        private function createHomeServices($home_id)
+        private function createWhatWeDo($home_id)
         {
-            $services_arr = getCustomMetaValues($home_id, "offer_meta_");
-            if (!empty($services_arr)) return;
+            $offer_arr = getCustomMetaValues($home_id, "offer_meta_");
+
+            if (!empty($offer_arr)) return;
             $offers = [
                 [
-                    "title" => "Projects",
-                    "icon" => "https://www.hashtagportal.com/wp-content/uploads/1/2020/07/Projects.jpeg",
-                    "url" => get_site_url() . "/search_properties/?property_type=Project"
+                    "title" => "House",
+                    "iconClass" => "im im-icon-Office",
+                    "icon" =>"",
+                    "content"=>""
                 ],
                 [
                     "title" => "Lands",
-                    "icon" => "https://www.hashtagportal.com/wp-content/uploads/1/2020/07/Land.jpeg",
-                    "url" => get_site_url() . "/search_properties/?property_type=Land"
+                    "iconClass" => "im im-icon-Landscape-2",
+                    "icon" =>"",
+                    "content"=>""
                 ],
                 [
-                    "title" => "House & Land",
-                    "icon" => "https://www.hashtagportal.com/wp-content/uploads/1/2020/07/Land.jpeg",
-                    "url" => get_site_url() . "/search_properties/?property_type=House%20amp;%20Land%20Packages%20Real%20Estate"
+                    "title" => "Apartments",
+                    "iconClass" => "im im-icon-Building",
+                    "icon" =>"",
+                    "content"=>""
                 ],
                 [
-                    "title" => "Build Contract",
-                    "icon" => "https://www.hashtagportal.com/wp-content/uploads/1/2020/07/Build-Contract-1.jpeg",
-                    "url" => get_site_url() . "/search_properties/?property_type=Build%20Contract"
+                    "title" => "Garages",
+                    "iconClass" => "im im-icon-Car",
+                    "icon" =>"",
+                    "content"=>""
                 ],
             ];
             foreach ($offers as $index => $offer) {
                 update_post_meta($home_id, "offer_meta_" . $index, $offer);
             }
         }
+
+        private function createWhyChooseUs($home_id)
+        {
+            $service_arr = getCustomMetaValues($home_id, "service_meta_");
+
+            if (!empty($service_arr)) return;
+
+            $why_content = "To us, it's not just work - we take pride in the solutions we deliver. As everyone have a different journey we make sure you will have a unique experience.  With 100% transparency we guarantee you we will find the best deal to you. What does this mean? Tomorrow, we will be here for you. Helping you with everything that you need to purchase a house under only one roof.";
+            $services = [
+                [
+                    "title" => "100% Secure",
+                    "iconClass"=>"",
+                    "icon"=>"",
+                    "content" => $why_content
+                ],
+                [
+                    "title" => "100% Reliable",
+                    "iconClass"=>"",
+                    "icon"=>"",
+                    "content" =>$why_content
+                ],
+                [
+                    "title" => "100% Trustable",
+                    "iconClass"=>"",
+                    "icon"=>"",
+                    "content" => $why_content
+                ]
+            ];
+            foreach ($services as $index => $service) {
+                update_post_meta($home_id, "service_meta_" . $index, $service);
+            }
+        }
+
+
+        private function createWhatWeOffer($home_id)
+        {
+            $service_arr = get_post_meta($home_id, "what_we_do_desc", true);
+            if (!empty($service_arr)) return;
+
+            $default_desc = "We work for you to provide the greatest result possible. This begins from the very initial point of communication and goes into our time spent with you to comprehend your requirements and your property. We will take the time to ensure you are capable to get an information decision that is right for your investment. We always understand the need of continually improving and modernizing our products and technology to keep our clients engaged and help each single one to achieve their goals. Making the most of our experience and doing it right.";
+
+            update_post_meta($home_id, "what_we_do_desc", $default_desc);
+
+        }
+
 
         private function setupMenuItems($home_page_id, $about_page_id, $contact_page_id)
         {
@@ -177,6 +229,8 @@ if (!class_exists("HashTagTheme")) {
             $locations['policy_menu'] = $menu_id;
             set_theme_mod('nav_menu_locations', $locations);
         }
+
+
 
         private function storeCustomizerValues()
         {
