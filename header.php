@@ -10,7 +10,31 @@
 
     <?php wp_head(); ?>
 	<!-- Facebook Pixel Code -->
-	<script>
+    <?php
+    $google_id =  getCustomThemeValue("google_analytics", false);
+    if(isset($google_id) && $google_id !=false ) :
+        ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-<?php echo $google_id; ?>"></script>
+        <script>
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag(){dataLayer.push(arguments);}
+
+            gtag('js', new Date());
+
+            gtag('config', 'UA-<?php echo $google_id; ?>');
+
+        </script>
+    <?php endif; ?>
+    <?php
+    $facebook_pixel =  getCustomThemeValue("facebook_pixel", "201889034433353");
+
+    if(isset($facebook_pixel)):
+        ?>
+        <!-- Facebook Pixel Code -->
+        <script>
             ! function(f, b, e, v, n, t, s) {
                 if (f.fbq) return;
                 n = f.fbq = function() {
@@ -29,13 +53,16 @@
                 s.parentNode.insertBefore(t, s)
             }(window, document, 'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '201889034433353');
+            fbq('init', '<?php echo $facebook_pixel; ?>');
             fbq('track', 'PageView');
         </script>
         <noscript>
-            <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=201889034433353&ev=PageView&noscript=1" />
+            <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<?php echo $facebook_pixel; ?>&ev=PageView&noscript=1" />
         </noscript>
         <!-- End Facebook Pixel Code -->
+    <?php endif; ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -103,8 +130,13 @@
                             <div class="login-hub w-1/2 md:w-auto">
                                 <a href="<?php echo getCustomThemeValue("login_url", "https://paighub.paig.com.au/auth/login") ?>"
                                    class="sign-in pl-5 pt-1 px-16 block">
-                                    <i class="fa fa-user"></i> LOGIN</a>
+                                    <i class="fa fa-user"></i> Join Hashtag Hub</a>
                             </div>
+
+                         <?php
+                         $show_hastag_logo = get_theme_mod("show_hashtag_portal_logo","no");
+                            if($show_hastag_logo == 'yes'):
+                         ?>
                             <div class="hashtag-portal-logo flex items-center w-1/2  md:w-auto" style="max-width:170px;">
                                 <?php
                                 $link = getCustomThemeValue("hashtag_link","#");
@@ -116,6 +148,8 @@
 
                                 </a>
                             </div>
+                            <?php endif; ?>
+
                         </div>
                     </div>
                     <!-- Right Side Content / End -->

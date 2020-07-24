@@ -41,10 +41,7 @@
 
                         </div>
                         <div class="mb-2">
-                            <textarea class="w-full p-3" name="offer_content[]" rows="5" placeholder="Short Description"><?php echo esc_textarea($offer["content"]); ?> </textarea>
-                        </div>
-                        <div class="mb-2">
-                            <input class="w-full" type="url" name="offer_url[]" value="<?php echo esc_html(isset($offer['url']) ? $offer['url'] : '') ?>" placeholder="URL" />
+                            <textarea class="w-full" name="offer_content[]" rows="5" placeholder="Short Description"><?php echo esc_textarea($offer["content"]); ?> </textarea>
                         </div>
                     </div>
 

@@ -5,7 +5,7 @@ if (!class_exists("HashTagHooks")) {
     {
         public function __construct()
         {
-            add_action("wp_enqueue_scripts",array($this,"add_stylesheet_script"),10);
+            add_action("wp_enqueue_scripts",array($this,"add_stylesheet_script"));
             add_action('wp_head', array($this, "renderThemeColor"));
             add_action("wp_footer", array($this, "enqueueStyles"));
 

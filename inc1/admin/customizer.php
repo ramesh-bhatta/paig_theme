@@ -12,6 +12,7 @@ function paig_metadata_customize_register( $wp_customize ) {
 
             
     // Create our sections
+
     $wp_customize->add_section( 'paig_contact_details' , array(
         'title'             => 'PAIG Contact Details',
         'panel'             => 'paig_site_meta',
@@ -62,32 +63,6 @@ function paig_metadata_customize_register( $wp_customize ) {
         'settings'   => 'address',
         'type'       => 'text',
     ) );
-
-
-
-    $wp_customize->add_setting( 'map_iframe', array(
-        'type'           => 'theme_mod',
-        'transport' => 'refresh',
-       // 'sanitize_callback' => 'sanitize_textarea_field'
-    ) );
-    // Add control
-    $wp_customize->add_control( new WP_Customize_Control(
-            $wp_customize,
-            'map_iframe_control',
-            array(
-                'label'    => 'Embed Map',
-                'section'  => 'paig_contact_details',
-                'settings' => 'map_iframe',
-                'type'     => 'textarea'
-            )
-        )
-    );
-
-
-
-
-
-
 
     $wp_customize->add_section( 'paig_social_media_links' , array(
         'title'             => 'PAIG Social Media Links',
@@ -163,24 +138,6 @@ function paig_metadata_customize_register( $wp_customize ) {
         'label'             => "Hashtag Portal URL",
         'section'           => 'paig_custom_settings',
         'settings'          => 'hashtag_portal_url',
-    ));
-
-    $wp_customize->add_setting('show_hashtag_portal_logo', array(
-        'type'=>'theme_mod',
-        'transport'      => 'refresh',
-        'height'         => 325,
-        'default' => 'yes'
-    ));
-
-    $wp_customize->add_control( 'show_hashtag_portal_logo',array(
-        'type' => 'select',
-        'label'             => "Show Hashtag Portal",
-        'section'           => 'paig_custom_settings',
-        'settings'          => 'show_hashtag_portal_logo',
-        'choices' => array(
-            'no' => 'No',
-            'yes' => 'Yes'
-        ),
     ));
 
 
@@ -307,68 +264,31 @@ function paig_metadata_customize_register( $wp_customize ) {
 
 
 
-
-    // theme color settings
-    $wp_customize->add_panel( 'paig_analytics', array(
+    // theme layout settings
+    $wp_customize->add_panel( 'layout_setting', array(
         'capability'     => 'edit_theme_options',
-        'title'          => 'PAIG Analytics Setup',
+        'title'          => 'PAIG Layout Settings',
     ));
-    $wp_customize->add_section( 'paig_analytics_section' , array(
-        'title'             => 'PAIG Analytics',
-        'panel'             => 'paig_analytics',
+    $wp_customize->add_section( 'paig_layout_settings' , array(
+        'title'             => 'PAIG Layout Settings',
+        'panel'             => 'layout_settings',
     ));
 
-    $wp_customize->add_setting( "facebook_pixel" , array(
+    $wp_customize->add_setting( "header_layout_type" , array(
         'type'          => 'theme_mod',
         'transport'     => 'refresh',
     ));
 
-    $wp_customize->add_control( 'facebook_pixel_control', array(
-        'label'      => "Facebook Pixel",
-        'section'    => 'paig_analytics_section',
-        'settings'   => "facebook_pixel",
-        'type'       => 'text'
-    ) );
-
-    $wp_customize->add_setting( "google_analytics" , array(
-        'type'          => 'theme_mod',
-        'transport'     => 'refresh',
-    ));
-
-    $wp_customize->add_control( 'google_analytics_control', array(
-        'label'      => "Google Analytics ",
-        'section'    => 'paig_analytics_section',
-        'settings'   => "google_analytics",
-        'type'       => 'text'
-    ) );
-
-
-
-//    // theme layout settings
-//    $wp_customize->add_panel( 'layout_setting', array(
-//        'capability'     => 'edit_theme_options',
-//        'title'          => 'PAIG Layout Settings',
-//    ));
-//    $wp_customize->add_section( 'paig_layout_settings' , array(
-//        'title'             => 'PAIG Layout Settings',
-//        'panel'             => 'layout_settings',
-//    ));
-//
-//    $wp_customize->add_setting( "header_layout_type" , array(
-//        'type'          => 'theme_mod',
-//        'transport'     => 'refresh',
-//    ));
-//
-//    $wp_customize->add_control(
-//        new WP_Customize_Color_Control(
-//            $wp_customize,
-//            'paig_theme_color',
-//            array(
-//                'label'      => "Theme Color",
-//                'section'    => 'paig_color_settings',
-//                'settings'   => 'primary_color',
-//            ) )
-//    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'paig_theme_color',
+            array(
+                'label'      => "Theme Color",
+                'section'    => 'paig_color_settings',
+                'settings'   => 'primary_color',
+            ) )
+    );
 
 
 }

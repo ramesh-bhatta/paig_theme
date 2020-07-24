@@ -40,7 +40,9 @@
                         
                     </div>
                     <div class="mb-2">
-                        <textarea class="w-full p-3" name="service_content[]" rows="5" placeholder="Short Description"><?php echo esc_textarea($service["content"]); ?></textarea>
+                        <textarea class="w-full" name="service_content[]" rows="5" placeholder="Short Description">
+                            <?php echo esc_textarea($service["content"]); ?>
+                        </textarea>
                     </div>
                 </div>
                 
