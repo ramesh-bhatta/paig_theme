@@ -1,5 +1,5 @@
 <!-- Fullwidth Section -->
-<section class="fullwidth margin-top-0 offer-section py-24" data-background-color="#f7f7f7" id="what-we-do">
+<section class="fullwidth margin-top-0 offer-section py-24" data-background-color="#fff" id="what-we-do">
 
 
     <!-- Content -->

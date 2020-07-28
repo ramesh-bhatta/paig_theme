@@ -2,7 +2,7 @@
 ================================================== -->
 <div id="footer">
 	<!-- Main -->
-	<div class="footer-top">
+	<div class="footer-top py-24">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-6">

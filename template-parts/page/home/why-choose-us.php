@@ -3,7 +3,7 @@ $post_id=get_option("page_on_front");
 $service_arr = getServiceMetaValues($post_id);
 ?>
 
-<section class="why-choose-us py-24 pt-10 pb-50" id="why-choose-us">
+<section class="why-choose-us py-24" id="why-choose-us">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 mx-auto text-center">
@@ -18,9 +18,9 @@ $service_arr = getServiceMetaValues($post_id);
                     $title=isset($service['title']) ? $service['title'] : "";
                     $content=isset($service['content']) ? $service['content'] : "";
                 ?>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 mb-10 md:mb-0">
                     <!-- Single Service -->
-                    <div class="single-service">
+                    <div class="single-service rounded-lg">
                         <?php if (!empty($service['iconClass'])): ?>
                             <i class="<?php echo $service['iconClass']; ?>"></i>
                         <?php elseif (!empty($service['icon'])): ?>
@@ -29,7 +29,7 @@ $service_arr = getServiceMetaValues($post_id);
                             </div>
                         <?php endif; ?>
                         <h4><?php echo $title  ?> </h4>
-                        <p><?php echo $content ?></p>
+                        <p class="text-justify"><?php echo $content ?></p>
                     </div>
                 </div>
 
