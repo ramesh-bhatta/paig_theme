@@ -158,12 +158,12 @@
 
                 <!-- Main Navigation -->
                 <!-- Main Navigation -->
-                <nav id="navigation" class="style-2 mt-0">
+                <nav id="navigation" class="style-2 mt-0 bg-theme">
                     <div class="container">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'primary_menu',
-                            'menu_class' => '',
+                            'menu_class' => 'menu-cls',
                             'container' => 'ul',
                             'menu_id' => 'responsive',
                             'walker' => new WP_Bootstrap_Navwalker()
